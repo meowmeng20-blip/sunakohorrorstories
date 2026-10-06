@@ -14,12 +14,12 @@
     <meta name="author" content="Sunako Admin">
     <meta name="robots" content="index, follow">
 
-    <!-- OPEN GRAPH / SOCIAL MEDIA META TAGS (FB, TikTok, Messenger Previews) -->
+    <!-- OPEN GRAPH / SOCIAL MEDIA META TAGS -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="SUNAKO HORROR STORIES - Real Life Stories & Urban Legends">
     <meta property="og:description" content="Read horrifying true experiences, Philippine urban legends, and creepy encounters in Tagalog and English.">
     <meta property="og:image" content="https://i.imgur.com/ZwjB8c0.jpg">
-    <meta property="og:url" content="https://sunakohorror.com/">
+    <meta property="og:url" content="https://sunakohorrorstories.vercel.app/">
 
     <!-- GOOGLE ADSENSE CODE -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6737021640296795"
@@ -58,15 +58,15 @@
     <nav class="border-b border-red-950/60 bg-black/85 backdrop-blur-md sticky top-0 z-50 px-4 py-3 shadow-lg">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2">
-                <i class="fa-solid font-bold fa-skull text-red-600 text-2xl animate-pulse"></i>
+                <i class="fa-solid fa-skull text-red-600 text-2xl animate-pulse"></i>
                 <span class="font-creepster text-2xl text-red-600 tracking-wider glow-text">SUNAKO</span>
             </a>
             
             <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
                 <a href="index.html" class="hover:text-red-500 transition-colors text-red-500">Home</a>
                 <a href="#stories" class="hover:text-red-500 transition-colors">Stories</a>
-                <button onclick="openModal('about')" class="hover:text-red-500 transition-colors">About Us</button>
-                <button onclick="openModal('contact')" class="hover:text-red-500 transition-colors">Contact</button>
+                <a href="about.html" class="hover:text-red-500 transition-colors">About Us</a>
+                <a href="contact.html" class="hover:text-red-500 transition-colors">Contact</a>
             </div>
 
             <!-- SEARCH BAR -->
@@ -149,26 +149,13 @@
                 &copy; 2026 SUNAKO HORROR STORIES. All rights reserved.
             </div>
             <div class="flex flex-wrap justify-center gap-6">
-                <button onclick="openModal('about')" class="hover:text-gray-300 transition-colors">About Us</button>
-                <button onclick="openModal('privacy')" class="hover:text-gray-300 transition-colors">Privacy Policy</button>
-                <button onclick="openModal('terms')" class="hover:text-gray-300 transition-colors">Terms of Service</button>
-                <button onclick="openModal('contact')" class="hover:text-gray-300 transition-colors">Contact Us</button>
+                <a href="about.html" class="hover:text-gray-300 transition-colors">About Us</a>
+                <a href="privacy.html" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-gray-300 transition-colors">Terms of Service</a>
+                <a href="contact.html" class="hover:text-gray-300 transition-colors">Contact Us</a>
             </div>
         </div>
     </footer>
-
-    <!-- MODAL FOR ADSENSE PAGES -->
-    <div id="infoModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-zinc-900 border border-red-900/50 rounded-xl max-w-2xl w-full max-h-[80vh] flex flex-col shadow-2xl overflow-hidden">
-            <div class="p-4 border-b border-zinc-800 flex items-center justify-between bg-zinc-950">
-                <h3 id="modalTitle" class="font-bold text-lg text-red-500">Title</h3>
-                <button onclick="closeModal()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
-            </div>
-            <div id="modalBody" class="p-6 overflow-y-auto text-sm text-gray-300 space-y-4 leading-relaxed">
-                <!-- Dynamic Content -->
-            </div>
-        </div>
-    </div>
 
     <!-- 1. EXTERNAL STORIES DATA -->
     <script src="stories.js"></script>
@@ -197,7 +184,6 @@
             document.getElementById('storyCount').innerText = `${filtered.length} Stories Found`;
 
             filtered.forEach((story, index) => {
-                // In-Feed Ad Slot pagkatapos ng 4th card
                 if(index === 4) {
                     grid.innerHTML += `
                         <div class="col-span-1 bg-red-950/10 border border-red-900/30 rounded-lg p-2 flex flex-col items-center justify-center text-center text-xs text-gray-500 overflow-hidden">
@@ -220,7 +206,6 @@
                 grid.innerHTML += `
                     <div class="story-card bg-zinc-950 border border-red-950 rounded-lg overflow-hidden flex flex-col justify-between group">
                         <div>
-                            <!-- COVER IMAGE LINK -->
                             <a href="${story.link}" class="block relative aspect-[3/4] overflow-hidden bg-zinc-900">
                                 <img src="${story.cover}" alt="${story.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <span class="absolute top-2 left-2 bg-black/70 backdrop-blur-md text-red-400 text-[10px] font-bold px-2 py-0.5 rounded border border-red-900/40 uppercase">
@@ -231,7 +216,6 @@
                                 </span>
                             </a>
 
-                            <!-- CARD CONTENT -->
                             <div class="p-3">
                                 <a href="${story.link}">
                                     <h3 class="font-semibold text-gray-100 text-sm line-clamp-1 group-hover:text-red-500 transition-colors">
@@ -247,7 +231,6 @@
                             </div>
                         </div>
 
-                        <!-- READ BUTTON LINK -->
                         <div class="p-3 pt-0">
                             <a href="${story.link}" class="block w-full text-center bg-red-950/40 hover:bg-red-700 text-red-300 hover:text-white border border-red-800/40 rounded py-1.5 text-xs font-semibold transition-all">
                                 Read Story <i class="fa-solid fa-book-open ml-1 text-[10px]"></i>
@@ -273,44 +256,6 @@
 
         function filterStories() {
             renderStories();
-        }
-
-        const modalTexts = {
-            about: {
-                title: "About Sunako Horror Stories",
-                content: `<p>Welcome to <strong>Sunako Horror Stories</strong>, a dedicated online hub for real-life horror experiences, urban legends, and terrifying folklore stories.</p>
-                          <p>Our goal is to bring together readers and writers who love eerie, dark, and chilling real-world experiences from around the globe.</p>`
-            },
-            privacy: {
-                title: "Privacy Policy",
-                content: `<p>At Sunako Horror Stories, accessible from our website, one of our main priorities is the privacy of our visitors.</p>
-                          <p><strong>Google AdSense & DoubleClick Cookie:</strong> Google, as a third-party vendor, uses cookies to serve ads on our site. Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visit to our site or other websites on the Internet.</p>
-                          <p>Users may choose to opt-out of personalized advertising by visiting Google Ads Settings.</p>`
-            },
-            terms: {
-                title: "Terms of Service",
-                content: `<p>By accessing Sunako Horror Stories, you agree to comply with these terms of service and all applicable laws and regulations.</p>
-                          <p>All horror stories posted here are for entertainment and reading purposes. Unlawful copying or unauthorized scraping of content without permission is strictly prohibited.</p>`
-            },
-            contact: {
-                title: "Contact Us",
-                content: `<p>If you have any questions, feedback, or horror story submissions, feel free to reach out to us:</p>
-                          <p class="font-semibold text-red-400">Email: contact@sunakohorror.com</p>
-                          <p class="text-xs text-gray-400 mt-4">We usually respond within 24 to 48 hours.</p>`
-            }
-        };
-
-        function openModal(type) {
-            const data = modalTexts[type];
-            if(data) {
-                document.getElementById('modalTitle').innerText = data.title;
-                document.getElementById('modalBody').innerHTML = data.content;
-                document.getElementById('infoModal').classList.remove('hidden');
-            }
-        }
-
-        function closeModal() {
-            document.getElementById('infoModal').classList.add('hidden');
         }
 
         renderStories();
