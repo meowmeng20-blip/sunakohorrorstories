@@ -105,12 +105,24 @@ const stories = [
         id: "hagdan",
         title: "The Voice in the Stairwell",
         cover: "https://i.imgur.com/iWyfpax.jpg",
-        link: "stair.html",
+        link: "yuba.html",
         category: "real-life",
         lang: "english",
         rating: "2.6",
         author: "Block",
         excerpt: "This is a story I do not often tell. I promise, sincerely, "
+    
+    },
+                {
+        id: "hagdan",
+        title: "Nurse-Ann",
+        cover: "https://i.imgur.com/hiLPfIv.jpg",
+        link: "nurseann.html",
+        category: "real-life",
+        lang: "tagalog",
+        rating: "3.6",
+        author: "Stephie G Caguicla",
+        excerpt: "May babae na maganda at maputi, siya si Ann. Nagtatrabaho siya bilang nurse"
     
     }
 ];
