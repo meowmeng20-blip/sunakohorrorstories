@@ -3,23 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUNAKO HORROR STORIES - Real Life Stories & Urban Legends</title>
+    <title>Sunako Horror Stories - True Paranormal Encounters & Urban Legends</title>
 
     <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
     <meta name="google-site-verification" content="lv4RtdoLKmPmNdpNikOxBRWVyMSGaiJClQSBmCiJnh4" />
 
-    <!-- SEO META TAGS -->
-    <meta name="description" content="Read horrifying true experiences, Philippine urban legends, haunted house stories, and creepy encounters in Tagalog and English at Sunako Horror Stories.">
-    <meta name="keywords" content="horror stories, tagalog horror stories, true ghost stories, urban legends, kwentong kababalaghan, sunako horror">
+    <!-- GLOBAL & BILINGUAL SEO META TAGS -->
+    <meta name="description" content="Read chilling true experiences, ghost encounters, Philippine urban legends, creepypastas, and haunted tales in Tagalog and English at Sunako Horror Stories.">
+    <meta name="keywords" content="horror stories, tagalog horror stories, true ghost stories, urban legends, paranormal encounters, kwentong kababalaghan, Asian folklore, creepypasta, sunako horror">
     <meta name="author" content="Sunako Admin">
     <meta name="robots" content="index, follow">
 
-    <!-- OPEN GRAPH / SOCIAL MEDIA META TAGS -->
+    <!-- OPEN GRAPH / SOCIAL MEDIA META TAGS (FOR GLOBAL SHARING) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="SUNAKO HORROR STORIES - Real Life Stories & Urban Legends">
-    <meta property="og:description" content="Read horrifying true experiences, Philippine urban legends, and creepy encounters in Tagalog and English.">
+    <meta property="og:site_name" content="Sunako Horror Stories">
+    <meta property="og:title" content="Sunako Horror Stories - True Paranormal Encounters & Urban Legends">
+    <meta property="og:description" content="Explore chilling true ghost encounters, Asian folklore, creepypastas, and urban legends in Tagalog and English.">
     <meta property="og:image" content="https://i.imgur.com/ZwjB8c0.jpg">
     <meta property="og:url" content="https://sunakohorrorstories.vercel.app/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="tl_PH">
+
+    <!-- TWITTER CARD META TAGS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sunako Horror Stories - Paranormal Tales & Urban Legends">
+    <meta name="twitter:description" content="Read chilling true ghost encounters and urban legends in Tagalog and English.">
+    <meta name="twitter:image" content="https://i.imgur.com/ZwjB8c0.jpg">
+
+    <!-- SCHEMA.ORG STRUCTURED DATA FOR GOOGLE SEARCH ENGINE -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Sunako Horror Stories",
+      "url": "https://sunakohorrorstories.vercel.app/",
+      "description": "A digital repository for true horror stories, ghost encounters, and urban legends in Tagalog and English.",
+      "inLanguage": ["en", "tl"],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sunako Horror Stories",
+        "logo": "https://i.imgur.com/ZwjB8c0.jpg"
+      }
+    }
+    </script>
 
     <!-- GOOGLE ADSENSE CODE -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6737021640296795"
@@ -71,7 +97,7 @@
 
             <!-- SEARCH BAR -->
             <div class="relative w-48 md:w-64">
-                <input type="text" id="searchInput" oninput="filterStories()" placeholder="Find a story..." 
+                <input type="text" id="searchInput" oninput="filterStories()" placeholder="Search stories or keywords..." 
                        class="w-full bg-red-950/20 border border-red-900/40 rounded-full py-1.5 pl-9 pr-4 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600 transition-all">
                 <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-gray-500 text-xs"></i>
             </div>
@@ -99,7 +125,7 @@
             SUNAKO HORROR STORIES
         </h1>
         <p class="text-xs sm:text-sm uppercase tracking-[0.3em] font-semibold text-gray-400">
-            REAL LIFE STORIES & URBAN LEGENDS
+            PARANORMAL ENCOUNTERS • URBAN LEGENDS • CREEPYPASTAS
         </p>
     </header>
 
@@ -109,14 +135,14 @@
         <!-- CATEGORY FILTERS -->
         <div class="flex flex-wrap items-center justify-between gap-4 mb-8 border-b border-red-950/50 pb-4 sticky top-[60px] bg-black/70 backdrop-blur-md z-40 p-2 rounded-lg">
             <div class="flex flex-wrap gap-2">
-                <button onclick="setCategory('all')" id="btn-all" class="filter-btn bg-red-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition-all">All</button>
-                <button onclick="setCategory('tagalog')" id="btn-tagalog" class="filter-btn bg-red-950/40 hover:bg-red-900/50 text-gray-300 text-xs font-semibold px-4 py-1.5 rounded-full border border-red-900/30 transition-all">Tagalog</button>
-                <button onclick="setCategory('english')" id="btn-english" class="filter-btn bg-red-950/40 hover:bg-red-900/50 text-gray-300 text-xs font-semibold px-4 py-1.5 rounded-full border border-red-900/30 transition-all">English</button>
+                <button onclick="setCategory('all')" id="btn-all" class="filter-btn bg-red-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition-all">All Stories</button>
+                <button onclick="setCategory('tagalog')" id="btn-tagalog" class="filter-btn bg-red-950/40 hover:bg-red-900/50 text-gray-300 text-xs font-semibold px-4 py-1.5 rounded-full border border-red-900/30 transition-all">🇵🇭 Tagalog</button>
+                <button onclick="setCategory('english')" id="btn-english" class="filter-btn bg-red-950/40 hover:bg-red-900/50 text-gray-300 text-xs font-semibold px-4 py-1.5 rounded-full border border-red-900/30 transition-all">🌐 English</button>
                 <button onclick="setCategory('real-life')" id="btn-real-life" class="filter-btn bg-red-950/40 hover:bg-red-900/50 text-gray-300 text-xs font-semibold px-4 py-1.5 rounded-full border border-red-900/30 transition-all">
-                    <i class="fa-solid fa-fire text-orange-500 mr-1"></i> True Experiences
+                    <i class="fa-solid fa-fire text-orange-500 mr-1"></i> True Encounters
                 </button>
             </div>
-            <span id="storyCount" class="text-xs text-gray-500">0 Stories Found</span>
+            <span id="storyCount" class="text-xs text-gray-500">0 Stories Available</span>
         </div>
 
         <!-- STORIES GRID -->
@@ -181,7 +207,7 @@
                 return matchesCat && matchesSearch;
             });
 
-            document.getElementById('storyCount').innerText = `${filtered.length} Stories Found`;
+            document.getElementById('storyCount').innerText = `${filtered.length} Stories Available`;
 
             filtered.forEach((story, index) => {
                 if(index === 4) {
