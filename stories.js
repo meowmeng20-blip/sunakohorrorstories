@@ -92,7 +92,7 @@ const stories = [
         {
         id: "hagdan",
         title: "The Yuba County Five",
-        cover: "https://i.imgur.com/FNOJv1i.jpg",
+        cover: "https://i.imgur.com/GAH9wBN.jpg",
         link: "yuba.html",
         category: "real-life",
         lang: "english",
