@@ -108,7 +108,7 @@ const stories = [
         link: "yuba.html",
         category: "real-life",
         lang: "english",
-        rating: "2.6",
+        rating: "4.6",
         author: "Block",
         excerpt: "This is a story I do not often tell. I promise, sincerely, "
     
@@ -120,7 +120,7 @@ const stories = [
         link: "nurseann.html",
         category: "real-life",
         lang: "tagalog",
-        rating: "3.6",
+        rating: "4.6",
         author: "Stephie G Caguicla",
         excerpt: "May babae na maganda at maputi, siya si Ann. Nagtatrabaho siya bilang nurse"
     
@@ -135,6 +135,18 @@ const stories = [
         rating: "5.6",
         author: "Yumiko",
         excerpt: "My grandparents lived in Japan."
+    
+    },
+                        {
+        id: "hagdan",
+        title: "The Phantom Truck of North Carolina",
+        cover: "https://i.imgur.com/ZhPx9sN.jpg",
+        link: "phantom.html",
+        category: "real-life",
+        lang: "english",
+        rating: "6.6",
+        author: "Dark Lord",
+        excerpt: "We have never figured this out. And now, the three living witnesses"
     
     }
 ];
