@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DONT FIND THEM - Sunako Horror Stories</title>
+
+    <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+    <meta name="google-site-verification" content="lv4RtdoLKmPmNdpNikOxBRWVyMSGaiJClQSBmCiJnh4" />
+
+    <!-- SEO META TAGS -->
+    <meta name="description" content="Isang nakakakilabot na kwento tungkol sa Black Towers, third eye, at mga batang multo na naglalaro ng tagu-taguan. Isinulat ni EmengLance para sa Sunako Horror Stories.">
+    <meta name="keywords" content="DONT FIND THEM, EmengLance, Black Towers, Third Eye, Tagu-taguan, Tagalog Horror Story, Pinoy Creepypasta, Sunako Horror Stories">
+    <meta name="author" content="EmengLance (Submitted to Sunako)">
+    <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH / SOCIAL MEDIA META TAGS -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Sunako Horror Stories">
+    <meta property="og:title" content="DONT FIND THEM - EmengLance">
+    <meta property="og:description" content="Huag mo silang hahanapin. Isang kwento ng kababalaghan sa loob ng Black Towers.">
+    <meta property="og:image" content="https://i.imgur.com/ET8EXEb.jpg">
+    <meta property="og:url" content="https://sunakohorrorstories.vercel.app/dont-find-them.html">
+    <meta property="og:locale" content="tl_PH">
+
+    <!-- TWITTER CARD META TAGS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DONT FIND THEM - EmengLance">
+    <meta name="twitter:description" content="Huwag mo silang hahanapin. Tagalog Paranormal & Creepypasta Encounter.">
+    <meta name="twitter:image" content="https://i.imgur.com/ET8EXEb.jpg">
+
+    <!-- SCHEMA.org STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "DONT FIND THEM",
+      "description": "Isang nakakakilabot na kwento tungkol sa third eye, Black Towers condo, at mga kulisap ng kahapon na naglalaro ng tagu-taguan.",
+      "image": "https://i.imgur.com/ET8EXEb.jpg",
+      "inLanguage": "tl",
+      "author": {
+        "@type": "Person",
+        "name": "EmengLance"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sunako Horror Stories",
+        "logo": "https://i.imgur.com/ZwjB8c0.jpg"
+      },
+      "mainEntityOfPage": "https://sunakohorrorstories.vercel.app/dont-find-them.html"
+    }
+    </script>
+    
+    <!-- GOOGLE ADSENSE SCRIPT -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6737021640296795"
+         crossorigin="anonymous"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { 
+            background: #050000; 
+            color: #e5e7eb; 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden;
+        }
+        .font-creepster { font-family: 'Creepster', cursive; }
+        .glow-text { text-shadow: 0 0 12px rgba(220, 38, 38, 0.8), 0 0 24px rgba(185, 28, 28, 0.4); }
+        .glow-box { box-shadow: 0 0 20px rgba(220, 38, 38, 0.15); }
+        
+        /* CANVAS BACKGROUND ANIMATION */
+        #bgCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* GLASS EFFECT CARDS */
+        .glass-card {
+            background: rgba(15, 3, 3, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(185, 28, 28, 0.25);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-red-900 selection:text-white">
+
+    <!-- ANIMATED BACKGROUND CANVAS -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- NAV BAR -->
+    <nav class="border-b border-red-950/80 bg-black/80 backdrop-blur-md px-4 py-3 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-red-500 font-semibold text-xs sm:text-sm hover:text-red-400 transition-all flex items-center gap-2 group">
+                <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i> Back to Home
+            </a>
+            <a href="index.html" class="font-creepster text-xl sm:text-2xl text-red-600 tracking-wider glow-text flex items-center gap-2">
+                <i class="fa-solid fa-skull text-red-600 text-lg animate-pulse"></i> SUNAKO
+            </a>
+        </div>
+    </nav>
+
+    <!-- TOP ADSENSE BANNER SLOT -->
+    <div class="max-w-3xl mx-auto w-full px-4 mt-6">
+        <div class="glass-card rounded-lg p-2 text-center text-xs text-gray-500 min-h-[60px] flex items-center justify-center overflow-hidden">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%; max-height:90px;"
+                 data-ad-client="ca-pub-6737021640296795"
+                 data-ad-slot="auto"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- STORY CONTENT AREA -->
+    <main class="max-w-3xl mx-auto px-4 py-8 w-full flex-grow">
+
+        <!-- HEADER SECTION -->
+        <header class="mb-8 text-center sm:text-left">
+            <div class="inline-flex items-center gap-2 bg-red-950/80 text-red-400 border border-red-900/50 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-inner">
+                <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span> Tagalog Horror • Creepypasta
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-red-600 mt-4 mb-3 tracking-tight glow-text leading-tight uppercase">
+                DONT FIND THEM
+            </h1>
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs text-gray-400 border-b border-red-950/80 pb-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-pen text-red-500"></i> Sender: <strong class="text-gray-200">EmengLance</strong></span>
+                <span>•</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-eye text-red-500"></i> Third Eye & Hauntings</span>
+            </div>
+        </header>
+
+        <!-- COVER IMAGE WITH GLOW & SHADOW -->
+        <div class="relative mb-8 rounded-xl overflow-hidden border border-red-900/50 shadow-2xl glow-box group">
+            <img src="https://i.imgur.com/tPDCCrn.jpg" class="w-full max-h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" alt="DONT FIND THEM Cover Image">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+        </div>
+
+        <!-- CONTENT ARTICLE -->
+        <article class="glass-card rounded-2xl p-6 sm:p-10 space-y-5 text-gray-300 leading-relaxed text-base sm:text-lg border border-red-900/30 shadow-2xl">
+            <p>Mayroon akong third eye. Sige, tawanan niyo ako. Alam ko namang mahirap paniwalaan ito. Marami na ang nagsabing baka raw nababaliw lang ako. Na pawang nasa isipan ko lamang ang lahat ng mga nakikita ko, mga halusinasyon lamang. Mayroon din namang nagsasabi na sinasapian daw ako ng demonyo o ng isang masamang espirito. May nag-volunteer pa nga na ipagpe-pray over nila ako basta’t sumama lamang ako sa kanilang simbahan.</p>
+
+            <p>Hindi na ako nakikipagtalo kapag nabubuksan ang diskusyon tungkol sa aking third eye. Halos narinig ko na ang lahat ng mga paliwanag at teyorya tungkol sa mga taong nakakakita ng mga espirito. At, sa aking pagtanda, natanggap ko na rin na baka maaaring tama rin sila. Ayokong isipin na baliw ako ngunit marami na akong nakitang mga bagay na parang milagroso ngunit madaling naipaliwanag ng siyensya. Maaaring may diperensya nga ang utak ko, eh, ano naman ngayon? Natuto na akong mabuhay na nakakakita ng mga kaluluwa (o halusinasyon?) na naglalakad kasama ng mga buhay.</p>
+
+            <p>Isa sa mga dahilan kung bakit sa Black Towers ako kumuha ng unit ay dahil wala akong nararamdamang at nakikitang hindi normal. Sa lahat kasi ng mga condo na napuntahan ko, palagi akong may kakaibang nararanasan. Sa isang condo sa Makati, pagpasok ko pa lamang ay nakaramdam na kaagad ako ng panlalamig. Panlalamig na hindi dahil sa aircon, na hindi naman ganoon kalakas. Ito ang uri ng panlalamig na tagos hanggang buto. Hindi ko alam kung bakit ngunit bigla akong napatingala. At nagulat ako sa aking nakita (na hindi ko ipinahalata dahil nasanay na rin naman ako sa mga ganoong sitwasyon).</p>
+
+            <p>Sa malaki at enggrandeng chandelier na nakasabit sa mataas na kisame ay naglalaro ang dalawang batang babae. Ngunit walang sumisita sa kanila. Walang sumisigaw na baka mahulog sila. Sapagkat walang nakakakita sa kanila maliban sa akin. Hindi rin naman sila mahuhulog dahil lumulutang sila na parang wala silang anumang bigat. Naghahabulan sila sa chandelier, malalakas ang tawa nila (na ako rin lamang ang nakakarinig). Ngunit ang nakapagtataka ay wala silang mga mukha, at ang kanilang dalawang braso ay putol, walang mga kamay. Tumatagaktak mula sa dalawang dulo ang kanilang dugo, na tumutulo at namumuo sa marmol na lapag. Hindi na ako tumuloy at lumabas na lamang.</p>
+
+            <p>Sa iba pang mga condo ay ganoon din ang aking naranasan. Marami akong nakikitang mga kaluluwang pilit na nakikisalamuha sa mga nabubuhay pa. Marahil ay hindi nila alam na patay na sila. O baka naman ayaw pa nilang tumawid sa kabilang buhay. Ni minsan ay hindi ko sinubukang makipag-usap sa isa sa kanila. Hindi ko alam kung ano ang mas nakakatakot. Ang makipag-ugnayan sa isang sumakabilang-buhay na o kausapin ang isang halusinasyon?</p>
+
+            <p>Nalaman ko ang tungkol sa Black Towers mula sa isa kong kaibigan na nag-aalok ng mga condo units. Alam niya na naghahanap ako kaya’t agad niya akong pinadalhan ng isang text message.</p>
+
+            <div class="my-4 p-4 border-l-4 border-red-600 bg-red-950/30 rounded-r-xl text-gray-200 text-sm italic">
+                "Pards ‘di ba’t naghahanap ka ng condo? Tamang tama dito sa Black Towers. Malapit lang sa work mo. Bagong tayo lang saka afford mo!"
+            </div>
+
+            <p>Dahil sa malapit ko siyang kaibigan ay pumayag ako. Nang hanapin ko sa Internet ang Black Towers ay aaminin kong namangha ako sa disenyo at mga pasilidad nito. At malapit nga lamang sa pinagtatrabahuhan ko.</p>
+
+            <p>Pagpasok sa Black Towers ay binati ako ng guwardiyang naka-barong na nasa entrance. Nakangiti rin sa akin ang maganda at batang receptionist. Tumango lamang ako at sinuklian sila ng ngiti. Pagkatapos ay lumingon ako sa kanan, sa kaliwa, at tumingala sa kisame.</p>
+
+            <p class="font-semibold text-red-400">Wala akong nakitang kakaiba.</p>
+
+            <p>“Alberto!”</p>
+
+            <p>Lumingon ako at nakita si Rudy, classmate ko dati sa college at isa sa mga pinakamalalapit kong kaibigan. Matangkad siya at may kagandahang lalaki.</p>
+
+            <p>“Rudy, kamusta?” bati ko. “Tama ba yung narinig ko? Magkakaanak na raw kayo ni Abbey?</p>
+
+            <p>Tumawa si Rudy. “Ah, oo. Grabe, I’m so happy, pards. Excited na kami ni Abbey. Kaya nga heto, todo kayod.”</p>
+
+            <p>Tumawa rin ako sa sinabi niya.</p>
+
+            <p>“Gusto mong makita yung mga units?”</p>
+
+            <p>Mahusay mag-sales talk si Rudy. Lahat ng mga katanungan ko ay nasagot niya. Aaminin ko rin na na-impress ako sa Black Towers. At ang pinakamahalaga ay wala akong naramdaman o nakitang nakakatakot.</p>
+
+            <p>Tuwang-tuwa si Rudy nang magdesisyon akong kumuha na ng unit. Siyempre, malaki ang komisyon niya. Mukhang kailangang-kailangan din naman nilang mag-asawa dahil magiging isang pamilya na rin sila.</p>
+
+            <p>Maayos ang unang apat na buwan ko sa Black Towers. Mabait ang mga staff, magalang at matulungin. Sa umaga ay nagwo-work out ako sa gym bago pumasok sa trabaho. Sa gabi naman ay nagpapalamig ako sa in-door swimming pool. Laging masarap ang tulog ko sa gabi.</p>
+
+            <p class="text-red-500 font-bold text-lg uppercase tracking-wide">Ngunit hindi ito nagtagal.</p>
+
+            <p>Hindi ko alam kung kailan nagsimula o ano ang dahilan. Basta’t sunud-sunod na mga insidente sa Black Towers ang nabalitaan ko. Nandiyan ang isang dalagitang nag-collapse sa tapat ng elevator sa 14th floor. May mga staff at mga guwardiyang biglang nagkakasakit. Ang iba ay bigla na lamang hindi na pumasok sa trabaho. Sa 17th floor, dalawang lalaki ang natagpuan ng mga security sa loob ng kanilang mga unit, malnourished na at wala sa tamang pag-iisip. May naririnig akong bulung-bulungan na baka haunted daw ang condong ito ngunit wala naman akong nakikitang multo. Wala rin akong nararamdamang kakaiba.</p>
+
+            <p>Baka isang coincidence lamang ang lahat.</p>
+
+            <p>Isang araw ay nakatanggap ako ng tawag mula sa aking kaibigang si Juliet. Classmate ko rin siya noong college at katulad ko, mayroon din siyang third eye. Ngunit hindi tugma ang aming mga nakikita. Ang mga nakikita ko ay hindi niya nakikita, at ang mga nakikita niya ay hindi ko nakikita. Kapag pareho naman kaming may nakikita, laging magkaiba ang aming deskripsyon. Kaya’t bukas ang isipan ko na baka nga utak ko lang talaga ang may diperensya.</p>
+
+            <p>“Alberto, ano ka ba? May bago ka na palang condo. At sa Black Towers pa! Sosyal!”</p>
+
+            <p>Napangiti ako sa kanyang sinabi. Pinindot ko ang volume button ng aking cellphone upang mas lumakas ito.</p>
+
+            <p>“Hindi naman. Black Towers lang, sosyal na kaagad. Sakto lang. Hindi naman ganoon kamahal ang units dito.”</p>
+
+            <p>“Naku, nagdadahilan pa.” Malakas na halakhak ang narinig ko. “Eh, kelan mo ba ako iimbitahang bumisita diyan? Gusto kong makita ‘yang unit mo.”</p>
+
+            <p>“Sige, sige,” tugon ko. “Sa Saturday, nandito lang ako buong araw. Available ka ba?”</p>
+
+            <p>“Sure! Sige, punta ako mga hapon. Bandang four or five.”</p>
+
+            <p>“Magdala ka ng pagkain, ha. Hindi kita pakakainin.” Ako naman ang humalakhak.</p>
+
+            <p>Dumating ang Sabado. Nilinis ko ang aking unit. Nag-mop ako ng sahig at itinago ang mga labahan kong damit. Nagluto na rin ako ng spaghetti at malamang ay walang dalang pagkain ang aking kaibigan.</p>
+
+            <p class="font-bold text-red-500 tracking-widest uppercase">Ding! Dong!</p>
+
+            <p>Tiningnan ko ang orasan at nakitang 3:30PM pa lamang. Napaaga yata si Juliet, mukhang excited.</p>
+
+            <p>Agad kong tinungo ang pinto at binuksan ito.</p>
+
+            <p>“Oh, Juliet! Ang aga mo yata. Akalo ko mamaya ka pa darating.”</p>
+
+            <p>“Naku, himala nga. Walang masyadong traffic,” sagot niya. Sa kanyang kaliwang kamay ay bitbit niya ang isang paper bag mula sa isang convenience store. Puno ito ng mga chichirya.</p>
+
+            <p>Maliit na babae lamang si Juliet. Simple din lamang ang hitsura nito. Maiksi ang kanyang buhok kaya’t madalas ay napagkakamalang tomboy.</p>
+
+            <p>“Halika, pasok ka.”</p>
+
+            <p>Humakbang papasok si Juliet.</p>
+
+            <p>“Teka, buhatin mo naman ito.” Inabot niya sa akin ang kanyang dala. “Parang hindi ka naman gentle-“</p>
+
+            <p class="font-semibold text-red-400">Bigla siya tumigil sa kanyang kinatatayuan.</p>
+
+            <p>“Juliet?”</p>
+
+            <p>Sa isang segundo ay nawala ang kulay sa kanyang mukha. Nanlalaki rin ang kanyang mga mata.</p>
+
+            <p>“Juliet? Anong problema?”</p>
+
+            <p>Iginala ni Juliet ang kanyang mga mata sa loob ng aking condo. Tumingin siya sa kanan, sa kaliwa, pagkatapos ay sa kanan ulit.</p>
+
+            <p>“Juliet?” Nilakasan ko ang aking boses at hinawakan siya sa balikat.</p>
+
+            <p>Parang bigla siya nakuryente at napahakbang paatras.</p>
+
+            <p>“Juliet, anong problema?”</p>
+
+            <p>Tumungo lamang ang aking kaibigan, tinitigan ang kanyang sapatos.</p>
+
+            <p>“Juliet? Mayroon bang… mayroon ka bang nakikita?” mahina kong tanong.</p>
+
+            <p>Hindi ko alam kung ilang minuto ang lumipas bago tumango ang aking kaibigan.</p>
+
+            <p>Napakunot ang aking mukha sa kanyang tugon. Ilang beses na ring nangyari ang ganito, na may nararamdaman o nakikita si Juliet na hindi ko naman nararamdaman at nakikita. Hanggang ngayon ay hindi ko alam kung ano ang dapat kong paniwalaan. Ang sarili ko o ang aking kaibigan.</p>
+
+            <p>“Ah… Alberto. Mauna na pala ako,” sabi ni Juliet, ang boses ay nanginginig. “May importanteng lakad nga pala ako, ngayon ko lang naalala.”</p>
+
+            <p>“Ano ka ba, Juliet? Kadarating mo lang, ah. Kumain ka muna, nagluto ako ng spaghetti.”</p>
+
+            <p>“N-Naku, hindi na. Sorry, pero hindi ko yata kayang…”</p>
+
+            <p>Hindi ko alam ngunit parang hindi siya makatingin sa akin ng diretso. Hinintay ko siyang tapusin ang kanyang sasabihin ngunit hindi na niya itinuloy.</p>
+
+            <p>“Juliet, please. Subukan mo lang. Ako nga, walang nararamdaman o nakikita dito, eh.”</p>
+
+            <p>Bigla akong tiningnan ni Juliet, tinitigan sa mga mata. <span class="text-red-500 font-bold uppercase">“Hindi mo kasi sila hinahanap!”</span></p>
+
+            <p>Napaatras ako ng isang hakbang sa inasal niya.</p>
+
+            <p>“Juliet?”</p>
+
+            <p>Parang natauhan ang aking kaibigan. Kumurap-kurap siya at kinusot ang mga mata. Pagkatapos ay muli siyang tumingin sa akin, may ngiti na sa kanyang mga labi.</p>
+
+            <p>“Naku, sorry talaga, Alberto,” sabi niya. “Huwag mo na lang akong pansinin. Alam mo naman ako, lukaret.” Pagkasabi nito ay tumawa niya, matinis, parang makakabasag ng baso.</p>
+
+            <p>“Kailangan ko na talagang umalis, Alberto. Sorry talaga, sorry. Makakabawi din ako sa’yo, promise!”</p>
+
+            <p>Agad na tumalikod si Juliet at naglakad palayo sa aking pintuan.</p>
+
+            <p>“Teka, Juliet!”</p>
+
+            <p>Tumigil siya ngunit hindi humarap sa akin.</p>
+
+            <p>“Anong ibig mong sabihing hindi ko sila hinahanap? Sinong sila?” tanong ko.</p>
+
+            <p>Dahan-dahang lumingon si Juliet, nakangiti pa rin. “Wala ‘yon. Huwag mo na lang pansinin ‘yung sinabi ko. Mukhang okay ka naman.</p>
+
+            <!-- WARNING BOX -->
+            <div class="my-6 pl-4 border-l-4 border-red-600 bg-red-950/40 p-5 rounded-r-xl text-gray-200 text-sm space-y-2 shadow-inner">
+                <p class="text-xs text-red-400 font-semibold uppercase tracking-wider mb-1"><i class="fa-solid fa-triangle-exclamation text-red-500"></i> Ang Banta:</p>
+                <p class="text-red-300 font-bold text-base">“Basta’t huwag mo lang silang hahanapin.”</p>
+            </div>
+
+            <p>Pagkasabi nito ay mabilis na naglakad si Juliet palayo. Tatawagin ko pa sana siya ngunit nakaliko na siya sa dulo ng hallway.</p>
+
+            <p>Huwag hahanapin? Sila? naisip ko.</p>
+
+            <p>Isinara ko ang pinto at iginala ang tingin sa aking condo. Wala, wala akong maramdamang kakaiba. Marahil ay tama nga ang mga nagsasabing may diperensya lamang ang mga tulad namin ni Juliet sa utak. Dahil kung totoo nga ang mga multo at ang third eye, ‘di dapat ay pareho kami ng nakikita. Siguro nga ay isang sintomas lamang ito ng sakit sa pag-iisip.</p>
+
+            <p>Gabi na ngunit hindi pa rin maalis sa isip ko ang nangyari kanina. Kahit hindi ko isipin ay bumabalik sa akin ang mga sinabi ni Juliet. Naalala ko rin ang mga kakaibang mga nangyari dito sa Black Towers. Paano nga kaya kung tama si Juliet at ako ang mali?</p>
+
+            <p class="italic text-red-400">Basta’t huwag mo lang silang hahanapin.</p>
+
+            <p>Tumayo ako sa aking kama at tinungo ang banyo. Sinabuyan ko ng malamig na tubig ang aking mukha. Pagkatapos ay lumabas ako at dumiretso sa salas. Ipinikit ko ang aking mga mata at nakiramdam.</p>
+
+            <p>Pag dilat ko ay inikot ko ang aking tingin sa buong silid. Tinitigan ko ang bawat madilim na sulok, ang bawat anino, ang lahat ng muwebles at mga appliances. Wala.</p>
+
+            <p class="italic text-red-400">Basta’t huwag mo lang silang hahanapin.</p>
+
+            <p>Tinungo ko ang kusina. Binuksan ko ang lahat ng mga cabinet. Wala.</p>
+
+            <p>Dumiretso ako sa banyo. Itinabi ko ang shower curtain na tumatakip sa maliit na bathtub. Wala.</p>
+
+            <p>Bumalik ako sa aking kwarto at naupo sa malambot kong kama. Tinakpan ko ang aking mukha gamit ang aking mga palad at napabuntong-hininga.</p>
+
+            <p>Wala naman, nasabi ko sa sarili.</p>
+
+            <p class="font-bold text-red-500">Hindi. Meron pang isang lugar na hindi ko pa tinitingnan.</p>
+
+            <p>Agad akong lumuhod sa malamig na tiles na lapag. Hindi ko kita ang ilalim ng kama ko dahil mahaba ang kubre-kama.</p>
+
+            <p>Hinawakan ko ang dulo ng kumot at inangat ito.</p>
+
+            <p>Sa ilalim ng aking kama ay may isang batang babaeng nakadapa, nakatutok ang tingin sa lapag. Bigla itong lumingon sa akin at tumili. Isang tili na parang mababasag ang aking eardrums.</p>
+
+            <p>Hindi ko alam kung sumigaw din ba ako. Basta’t mabilis akong gumapang paatras. Patuloy pa rin sa pagtili ang batang babae. Ang mukha nito ay puting-puti, na bahagyang natatakpan ng gulu-gulo nitong buhok. Medyo madungis ang kanyang mukha, ang kanyang mga labi ay biyak-biyak na may bahid ng dugo, at ang kanyang mga ngipin ay pulos nabubulok nang lahat. Ngunit ang pinakanakakatakot ay ang kanyang mga mata. Kulay puti lamang ito, walang buhay ngunit alam mong nakakakita pa rin.</p>
+
+            <p>Pinilit kong tumayo ngunit walang lakas ang aking mga binti at tuhod. Lalo lamang akong napasalampak sa sahig.</p>
+
+            <p>Biglang gumapang ang batang babae palabas ng aking kama. Pagkalabas ay tumayo ito at tinungo ang pinto. Nakita ko itong dumiretso sa salas at tumigil sa harapan ng T.V. Itinaas nito ang kanyang maputlang kamay at hinawakan ang malaking screen.</p>
+
+            <p class="font-bold text-red-400 uppercase">“Safe! Safe ako!”</p>
+
+            <p>Biglang nagtatalon ang batang babae, ang dalawang kamay ay winawagayway sa ere. Pagkasabi nito ay biglang bumukas ang aking aparador. Mula sa loob ay lumabas ang isang batang lalake. Sa tantiya ko ay nasa anim na taong gulang ito. Gumagapang siya dahil putol ang kanyang dalawang binti. Tumatawa ang batang lalaki palabas ng aking kwarto. Kagaya ng babae ay hinawakan din nito ang T.V. at sumigaw ng “Safe!”</p>
+
+            <p>May ilang bata pang lumabas mula sa kanilang mga pinagtataguan, hindi ko na nakita kung saan-saan. Lahat sila ay mapuputla ang katawan. Ang ilan ay duguan, ang iba ay nabubulok na. Mayroon pang isa na sabog ang ulo, tanging ilong at bibig na lamang ang natira. Lahat sila ay tinungo ang T.V., hinawakan ito at sumigaw ng “Safe!” Lahat sila ay nagtatatalon sa tuwa. Lahat sila ay tumatawa, ngunit ang kanilang halakhak, sa aking pandinig, ay parang kinakaskas na tinidor sa babasaging plato. Nakakangilo, nakakasakit ng ulo.</p>
+
+            <p>Muli ay pinilit kong tumayo ngunit muli akong natumba. Ang baso sa ibabaw ng isang lamesita ay aking nasanggi. Bumagsak ito at nabasag, sumambulat sa ‘di mabilang na piraso.</p>
+
+            <p class="font-bold text-red-500">Biglang tumigil ang tawanan. Natigilan ako sa aking pwesto at nakiramdam.</p>
+
+            <p>Isa-isang pumasok sa aking kwarto ang mga batang bangkay. Ang ilan ay naglalakad, ang ilan ay lumulutang, ang ilan ay gumagapang sa pader at sa kisame. Lahat sila ay nakatitig sa akin.</p>
+
+            <p>Tumigil silang lahat sa aking harapan. Pinalibutan nila ako.</p>
+
+            <p>“P-Para niyo ng awa. Huwag niyo akong sasaktan.” Ipinikit ko na lamang ang aking mga mata at humagulgol.</p>
+
+            <p>Isang malamig na kamay ang humaplos sa aking pisngi. Napasigaw ako at napadilat.</p>
+
+            <p>Ang batang babaeng nagtatago sa ilalim ng kama ko ay nakaluhod sa aking harapan, ang kanyang mukha ay ilang pulgada lamang ang layo sa aking mukha.</p>
+
+            <p class="text-red-400 font-semibold italic">“Kuya, dito na kami titira, ha. Ang saya dito,” sabi ng bata. Garalgal ang kanyang boses. Parang may nakabara sa kanyang lalamunan.</p>
+
+            <p class="text-red-500 font-bold uppercase">“Laro tayo ulit!”</p>
+            <p class="text-red-600 font-extrabold text-xl uppercase tracking-wider glow-text">“Ikaw ang taya!”</p>
+
+            <p>Pagkasabi nito ay biglang naglaho ang lahat ng mga bata sa aking harapan.</p>
+
+            <hr class="border-red-950 my-8">
+
+            <p>“O, pards. Bakit umalis ka na daw sa unit mo sa Black Towers? May problem ba?”</p>
+
+            <p>Tinitigan ko muna ang aking cellphone bago ako sumagot. “Wala naman, Rudy. Naisipan ko lang na malungkot pala tumira sa condo. Don’t worry. Babayaran ko pa rin naman ‘yun. Kung sakali mang gusto kong ibenta, sasabihin ko na lang sa’yo.”</p>
+
+            <p>Halos isang buwan na rin mula noong gabing iyon. Noong una ay binalewala ko lamang ang nangyari, pilit kong kinumbinsi na imahinasyon ko lamang ang lahat. Ngunit unti-unting lumala ang sitwasyon. Minsan ay nagigising ako sa gabi dahil mayroon akong naririnig na kumakanta ng “Taguan, taguan, maliwanag ang buwan.” Madalas ay may naririnig akong mga nagtatakbuhan at nagtatawanang mga bata. At tuwing darating ako sa aking unit pagkagaling sa trabaho, maririnig ko ang boses ng batang babae mula sa aking likuran na nagsasabing “Hanapin mo kami, kuya.” Kapag hindi ko ito pinansin ay biglang may mahuhulog na mga kagamitan sa kusina o sa salas. Minsan ay biglang nabasag ang salamin sa banyo. Bigla ding tutunog nang tutunog ang door bell. Kapag binuksan ko ang pinto ay wala namang tao.</p>
+
+            <p>Kapag naghanap naman ako ay wala akong makita. Hindi ko na ulit nakita ang mga batang multo at hindi na naulit ang nangyari noong gabing iyon. Ngunit patuloy pa rin sila sa paggambala sa akin.</p>
+
+            <p>Hanggang sa napagdesisyunan ko na lamang na umalis na sa Black Towers. Hindi ko alam kung may multo na sa unit na iyon bago pa man ako lumipat o sadyang “dumating” lamang ang mga batang multong iyon noong nakatira na ako doon.</p>
+
+            <p>Hanggang ngayon ay naaalala ko pa rin ang sinabi sa akin ni Juliet. Hanggang ngayon ay sinasabi ko pa rin sa aking sarili na sana ay hindi ko sila hinanap. Hanggang ngayon ay naririnig ko pa rin ang sinabi ng batang babae sa akin.</p>
+
+            <!-- CONCLUSION BOX -->
+            <div class="mt-8 p-6 border border-red-600/40 bg-gradient-to-r from-red-950/60 to-black rounded-xl relative overflow-hidden shadow-xl space-y-2">
+                <i class="fa-solid fa-quote-left text-red-900/30 text-5xl absolute -top-2 -left-2"></i>
+                <p class="text-sm sm:text-base text-red-300 font-semibold italic relative z-10 leading-relaxed">
+                    "Kuya, dito na kami titira, ha. Ang saya dito."
+                </p>
+                <p class="text-sm sm:text-base text-red-400 font-bold uppercase relative z-10">
+                    "Laro tayo ulit!"
+                </p>
+                <p class="text-base sm:text-lg text-red-500 font-extrabold uppercase relative z-10 tracking-widest glow-text">
+                    "Ikaw ang taya!"
+                </p>
+            </div>
+        </article>
+
+        <!-- SOCIAL SHARE BUTTONS -->
+        <div class="mt-10 pt-6 border-t border-red-950/80 flex flex-col items-center gap-3">
+            <span class="text-xs text-gray-400 font-medium tracking-widest uppercase">Share this story</span>
+            <div class="flex items-center justify-center gap-3">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://sunakohorrorstories.vercel.app/dont-find-them.html" 
+                   target="_blank" rel="noopener noreferrer" title="Facebook"
+                   class="w-9 h-9 rounded-full bg-blue-600/20 border border-blue-500/40 hover:bg-blue-600 text-blue-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://sunakohorrorstories.vercel.app/dont-find-them.html&text=Basahin%20ang%20DONT%20FIND%20THEM%20ni%20EmengLance" 
+                   target="_blank" rel="noopener noreferrer" title="X (Twitter)"
+                   class="w-9 h-9 rounded-full bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 text-gray-300 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <button onclick="copyLink()" title="Copy Link for Instagram"
+                        class="w-9 h-9 rounded-full bg-pink-600/20 border border-pink-500/40 hover:bg-pink-600 text-pink-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-instagram"></i>
+                </button>
+                <a href="https://t.me/share/url?url=https://sunakohorrorstories.vercel.app/dont-find-them.html&text=DONT%20FIND%20THEM%20-%20Sunako%20Horror%20Stories" 
+                   target="_blank" rel="noopener noreferrer" title="Telegram"
+                   class="w-9 h-9 rounded-full bg-sky-500/20 border border-sky-400/40 hover:bg-sky-500 text-sky-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?text=Basahin%20ang%20kwentong%20ito%20sa%20https://sunakohorrorstories.vercel.app/dont-find-them.html" 
+                   target="_blank" rel="noopener noreferrer" title="WhatsApp"
+                   class="w-9 h-9 rounded-full bg-emerald-600/20 border border-emerald-500/40 hover:bg-emerald-600 text-emerald-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <span id="copyMsg" class="text-[11px] text-green-400 hidden animate-pulse">Link copied to clipboard!</span>
+        </div>
+
+        <!-- BOTTOM ADSENSE AD -->
+        <div class="mt-8 mx-auto w-full max-w-[728px] min-h-[90px] glass-card rounded-lg overflow-hidden flex items-center justify-center">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%; height:90px"
+                 data-ad-client="ca-pub-6737021640296795"
+                 data-ad-slot="auto"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- BACK BUTTON TO HOME -->
+        <div class="mt-10 text-center">
+            <a href="index.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-red-950 to-red-900 hover:from-red-800 hover:to-red-700 text-red-200 hover:text-white border border-red-700/50 rounded-full px-8 py-3 text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:shadow-red-900/50 hover:scale-105">
+                <i class="fa-solid fa-ghost"></i> Read More Horror Stories
+            </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-black/90 border-t border-red-950 py-6 px-4 text-xs text-gray-500 text-center space-y-3">
+        <div class="flex justify-center gap-4 text-gray-400 flex-wrap">
+            <a href="about.html" class="hover:text-red-400 transition-colors">About Us</a>
+            <span>•</span>
+            <a href="privacy.html" class="hover:text-red-400 transition-colors">Privacy Policy</a>
+            <span>•</span>
+            <a href="terms.html" class="hover:text-red-400 transition-colors">Terms of Service</a>
+            <span>•</span>
+            <a href="contact.html" class="hover:text-red-400 transition-colors">Contact Us</a>
+        </div>
+        <p>&copy; 2026 SUNAKO HORROR STORIES. All rights reserved.</p>
+    </footer>
+
+    <!-- JS ANIMATION FOR DARK PARTICLES & COPY LINK -->
+    <script>
+        // DARK SMOKE PARTICLES CANVAS SCRIPT
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const particles = [];
+        const particleCount = 45;
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2.5 + 0.5;
+                this.speedY = -(Math.random() * 0.4 + 0.1);
+                this.speedX = (Math.random() - 0.5) * 0.2;
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+                if (this.y < 0 || this.x < 0 || this.x > canvas.width) {
+                    this.reset();
+                    this.y = canvas.height;
+                }
+            }
+            draw() {
+                ctx.fillStyle = `rgba(180, 20, 20, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // COPY LINK SCRIPT
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            const msg = document.getElementById('copyMsg');
+            msg.classList.remove('hidden');
+            setTimeout(() => msg.classList.add('hidden'), 2000);
+        }
+    </script>
+
+</body>
+</html>
