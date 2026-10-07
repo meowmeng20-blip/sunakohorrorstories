@@ -57,5 +57,10 @@
     <loc>https://sunakohorrorstories.vercel.app/stair.html</loc>
     <priority>1.0</priority>
   </url>
+  
+  <url>
+    <loc>https://sunakohorrorstories.vercel.app/nurseann.html</loc>
+    <priority>5.0</priority>
+  </url>
 
 </urlset>
