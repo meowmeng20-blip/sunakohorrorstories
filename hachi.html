@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hachishakusama: Eight Feet Tall - Sunako Horror Stories</title>
+
+    <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+    <meta name="google-site-verification" content="lv4RtdoLKmPmNdpNikOxBRWVyMSGaiJClQSBmCiJnh4" />
+
+    <!-- SEO META TAGS -->
+    <meta name="description" content="A terrifying Japanese urban legend about Hachishakusama (Eight Feet Tall) who stalked an 8-year-old child in a rural village. Submitted by Yumiko.">
+    <meta name="keywords" content="Hachishakusama, Eight Feet Tall, Japanese Urban Legend, Po Po Po, Japanese horror story, sunako horror stories, creepy encounter">
+    <meta name="author" content="Yumiko (Submitted to Sunako)">
+    <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH / SOCIAL MEDIA META TAGS -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Sunako Horror Stories">
+    <meta property="og:title" content="Hachishakusama: Eight Feet Tall">
+    <meta property="og:description" content="Po... Po... Po... A chilling Japanese urban legend about an entity that stalks children.">
+    <meta property="og:image" content="https://i.imgur.com/ET8EXEb.jpg">
+    <meta property="og:url" content="https://sunakohorrorstories.vercel.app/hachishakusama.html">
+    <meta property="og:locale" content="en_US">
+
+    <!-- TWITTER CARD META TAGS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hachishakusama: Eight Feet Tall">
+    <meta name="twitter:description" content="A chilling Japanese horror legend about Eight Feet Tall.">
+    <meta name="twitter:image" content="https://i.imgur.com/ET8EXEb.jpg">
+
+    <!-- SCHEMA.org STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Hachishakusama: Eight Feet Tall",
+      "description": "A terrifying Japanese urban legend about Hachishakusama (Eight Feet Tall) who stalked an 8-year-old child in a rural village.",
+      "image": "https://i.imgur.com/ET8EXEb.jpg",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "name": "Yumiko"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sunako Horror Stories",
+        "logo": "https://i.imgur.com/ZwjB8c0.jpg"
+      },
+      "mainEntityOfPage": "https://sunakohorrorstories.vercel.app/hachishakusama.html"
+    }
+    </script>
+    
+    <!-- GOOGLE ADSENSE SCRIPT -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6737021640296795"
+         crossorigin="anonymous"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { 
+            background: #050000; 
+            color: #e5e7eb; 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden;
+        }
+        .font-creepster { font-family: 'Creepster', cursive; }
+        .glow-text { text-shadow: 0 0 12px rgba(220, 38, 38, 0.8), 0 0 24px rgba(185, 28, 28, 0.4); }
+        .glow-box { box-shadow: 0 0 20px rgba(220, 38, 38, 0.15); }
+        
+        /* CANVAS BACKGROUND ANIMATION */
+        #bgCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* GLASS EFFECT CARDS */
+        .glass-card {
+            background: rgba(15, 3, 3, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(185, 28, 28, 0.25);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-red-900 selection:text-white">
+
+    <!-- ANIMATED BACKGROUND CANVAS -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- NAV BAR -->
+    <nav class="border-b border-red-950/80 bg-black/80 backdrop-blur-md px-4 py-3 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-red-500 font-semibold text-xs sm:text-sm hover:text-red-400 transition-all flex items-center gap-2 group">
+                <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i> Back to Home
+            </a>
+            <a href="index.html" class="font-creepster text-xl sm:text-2xl text-red-600 tracking-wider glow-text flex items-center gap-2">
+                <i class="fa-solid fa-skull text-red-600 text-lg animate-pulse"></i> SUNAKO
+            </a>
+        </div>
+    </nav>
+
+    <!-- TOP ADSENSE BANNER SLOT -->
+    <div class="max-w-3xl mx-auto w-full px-4 mt-6">
+        <div class="glass-card rounded-lg p-2 text-center text-xs text-gray-500 min-h-[60px] flex items-center justify-center overflow-hidden">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%; max-height:90px;"
+                 data-ad-client="ca-pub-6737021640296795"
+                 data-ad-slot="auto"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- STORY CONTENT AREA -->
+    <main class="max-w-3xl mx-auto px-4 py-8 w-full flex-grow">
+
+        <!-- HEADER SECTION -->
+        <header class="mb-8 text-center sm:text-left">
+            <div class="inline-flex items-center gap-2 bg-red-950/80 text-red-400 border border-red-900/50 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-inner">
+                <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span> Japanese Urban Legend • English
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-red-600 mt-4 mb-3 tracking-tight glow-text leading-tight uppercase">
+                HACHISHAKUSAMA (EIGHT FEET TALL)
+            </h1>
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs text-gray-400 border-b border-red-950/80 pb-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-pen text-red-500"></i> Sender: <strong class="text-gray-200">Yumiko</strong></span>
+                <span>•</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-torii-gate text-red-500"></i> Japanese Supernatural Legend</span>
+            </div>
+        </header>
+
+        <!-- COVER IMAGE WITH GLOW & SHADOW -->
+        <div class="relative mb-8 rounded-xl overflow-hidden border border-red-900/50 shadow-2xl glow-box group">
+            <img src="https://i.imgur.com/gYxu7IN.jpg" class="w-full max-h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" alt="Hachishakusama Cover Image">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+        </div>
+
+        <!-- CONTENT ARTICLE -->
+        <article class="glass-card rounded-2xl p-6 sm:p-10 space-y-5 text-gray-300 leading-relaxed text-base sm:text-lg border border-red-900/30 shadow-2xl">
+            <p>My grandparents lived in Japan. Every Summer, my parents would take me there on holiday to visit them. They lived in a small village and they had a big backyard. I loved to play there during the Summer. When we arrived, my grandparents always welcomed me with open arms. I was their only grandchild, so they spoiled me.</p>
+
+            <p>The last time I saw them was the Summer when I was 8 years old.</p>
+
+            <p>As usual, my parents booked a flight to Japan and we drove from the airport to my grandparents' house. They were delighted to see me and had a lot of little presents to give me. My parents wanted to have some time by themselves, so after a few days, they took a trip to another part of Japan, leaving me in the care of my Grandma and Grandpa.</p>
+
+            <p>One day, I was playing out in the backyard. My grandparents were inside the house. It was a hot Summer’s day and I lay down on the grass to rest. I stared up at the clouds and enjoyed the feeling of the soft rays of the sun and the gentle breeze. Just as I was about to get up, I heard a strange sound.</p>
+
+            <!-- SOUND HIGHLIGHT -->
+            <div class="my-6 pl-4 border-l-4 border-red-600 bg-red-950/40 p-5 rounded-r-xl text-red-300 font-mono text-base font-bold shadow-inner tracking-widest">
+                “Po… Po… Po… Po… Po… Po… Po…”
+            </div>
+
+            <p>I didn’t know what it was and it was hard to figure out where it was coming from. It sounded almost like somebody was making the noise themselves… as if they were just saying, “Po… Po… Po…” over and over again in a deep, masculine voice.</p>
+
+            <p>I was looking around, searching for the source of the noise when I suddenly noticed something on top of the tall hedges that enclosed the backyard. It was a straw hat. It wasn’t resting on the hedge, it was behind it. That’s where the sound was coming from.</p>
+
+            <p>Then, the hat began to move, as if someone was wearing it. The hat stopped at a small gap in the hedge and I could see a face peering through. It was a woman. But, the hedges were high… almost 8 feet tall…</p>
+
+            <p>I was surprised at how tall the woman was. I wondered if she was wearing stilts or some sort of huge high-heeled shoes. Then, a split second later, she walked off and the strange noise disappeared with her, fading into the distance.</p>
+
+            <p>Bewildered, I got up and wandered back into the house. My grandparents were in the kitchen drinking tea. I sat down at the table and, after a while, I told my grandparents what I had seen. They weren’t really paying attention to me, until I mentioned that distinctive sound.</p>
+
+            <p>As soon as I said <em>“Po… Po… Po…”</em>, both of them suddenly froze. Grandma’s eyes grew wide and she covered her mouth with her hand. Grandpa’s face became very serious and he grabbed me by the arm.</p>
+
+            <p><em>“This is very important,”</em> he said, in an intense voice. <em>“You must tell us exactly… How tall was she?”</em></p>
+
+            <p><em>“As tall as the garden hedge,”</em> I replied, beginning to get scared.</p>
+
+            <p>My grandfather bombarded me with questions: <em>“Where was she standing? When did this happen? What did you do? Did she see you?”</em></p>
+
+            <p>I tried to answer all his questions as best I could. He suddenly rushed out to the hallway and made a phone call. I couldn’t hear what he was saying. I looked over at my Grandma and she was trembling.</p>
+
+            <p>Grandpa came barging back into the room and spoke to my grandmother. <em>“I’ve got to go out for a while. You stay here with the child. Don’t take your eyes off him for a second.”</em></p>
+
+            <p><em>“What’s going on, Grandpa?”</em> I cried.</p>
+
+            <p>He looked at me with a sad expression in his eyes and said, <strong>“You’ve been liked by Hachishakusama.”</strong></p>
+
+            <p>With that, he hurried out, got into his truck and drove off.</p>
+
+            <!-- EXPLANATION BOX -->
+            <div class="my-6 pl-4 border-l-4 border-red-600 bg-red-950/40 p-5 rounded-r-xl text-gray-200 text-sm space-y-3 shadow-inner">
+                <p class="text-xs text-red-400 font-semibold uppercase tracking-wider mb-1"><i class="fa-solid fa-skull text-red-500"></i> What is Hachishakusama?</p>
+                <p>My grandmother explained that "Hachishakusama" means "Eight Feet Tall" in Japanese. Anyone who sees Eight Feet Tall is destined to die within a few days. She always chooses children as her victims because they are easily deceived when she poses as their relatives.</p>
+            </div>
+
+            <p>When Grandpa came back, there was an old woman with him named K-san. She handed me a small crumpled piece of parchment and said, <em>“Here, take this and hold it.”</em> They brought me into my bedroom. The windows were covered in newspaper with ancient runes written on them. Small bowls of salt were in all four corners, and a Buddha figure sat in the center.</p>
+
+            <p>K-san sat me down and instructed: <em>“You must stay in this room until 7 o’clock tomorrow morning. You must not come out under any circumstances. Your grandparents will not speak to you until then. Never let go of the parchment. If anything happens, pray to Buddha.”</em></p>
+
+            <p>I locked the door and waited. Around 1:00 AM, I woke up to tapping on the window.</p>
+
+            <p class="font-mono text-red-400">Tap, Tap, Tap, Tap, Tap…</p>
+
+            <p>Then I heard Grandpa’s voice outside the door: <em>“Are you OK in there? If you’re scared, I can come in and keep you company.”</em></p>
+
+            <p>I rushed to open the door, but stopped. The voice sounded like Grandpa, but something was terribly wrong. I glanced to my left and gasped—<strong>the salt in all four bowls was slowly turning pitch black.</strong></p>
+
+            <div class="my-4 p-4 rounded-xl bg-red-950/30 border border-red-900/40 text-red-300 font-mono text-sm">
+                “Po… Po… Po… Po… Po… Po… Po…”
+            </div>
+
+            <p>I fell to my knees in front of the Buddha statue, clutching the parchment, half-crying and praying all night. By morning, the salt was pitch black, but I had survived the night.</p>
+
+            <p>At 7:30 AM, K-san, my grandparents, my parents, and eight blood-relative men from the village put me in a 9-seater van to evacuate me out of the village. As we drove, Hachishakusama kept pace alongside the van, tapping frantically on the windows and echoing her terrifying voice.</p>
+
+            <p>Thanks to K-san's prayers and the protective convoy, we made it to the airport. I was forced to leave Japan forever. Anyone liked by her who survives must settle in foreign countries and can never set foot in their homeland again.</p>
+
+            <p>That happened more than 10 years ago. My grandfather passed away two years ago, strictly forbidding me from attending his funeral in his will to keep me safe.</p>
+
+            <p>A few days ago, my grandmother called me on the phone. She said she had been diagnosed with cancer and wanted to see me one last time before she dies.</p>
+
+            <p><em>“Are you sure, Grandma?”</em> I asked. <em>“Is it safe?”</em></p>
+
+            <p><em>“It’s been 10 years,”</em> she said. <em>“It’s all forgotten. You’re grown up now. I’m sure there won’t be a problem.”</em></p>
+
+            <p><em>“But… what about Hachishakusama?”</em> I asked.</p>
+
+            <p>For a moment, there was complete silence on the other end of the line. Then, I heard a deep, masculine voice speaking through the receiver...</p>
+
+            <!-- CHILLING CLIFFHANGER ENDING -->
+            <div class="mt-8 p-6 border border-red-600/50 bg-gradient-to-r from-red-950 to-black rounded-xl relative overflow-hidden shadow-2xl">
+                <p class="text-xl sm:text-2xl text-red-500 font-mono font-bold tracking-widest text-center animate-pulse">
+                    “Po… Po… Po… Po… Po… Po… Po…”
+                </p>
+            </div>
+        </article>
+
+        <!-- SOCIAL SHARE BUTTONS -->
+        <div class="mt-10 pt-6 border-t border-red-950/80 flex flex-col items-center gap-3">
+            <span class="text-xs text-gray-400 font-medium tracking-widest uppercase">Share this story</span>
+            <div class="flex items-center justify-center gap-3">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://sunakohorrorstories.vercel.app/hachishakusama.html" 
+                   target="_blank" rel="noopener noreferrer" title="Facebook"
+                   class="w-9 h-9 rounded-full bg-blue-600/20 border border-blue-500/40 hover:bg-blue-600 text-blue-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://sunakohorrorstories.vercel.app/hachishakusama.html&text=Read%20the%20scary%20Japanese%20legend:%20Hachishakusama" 
+                   target="_blank" rel="noopener noreferrer" title="X (Twitter)"
+                   class="w-9 h-9 rounded-full bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 text-gray-300 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <button onclick="copyLink()" title="Copy Link for Instagram"
+                        class="w-9 h-9 rounded-full bg-pink-600/20 border border-pink-500/40 hover:bg-pink-600 text-pink-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-instagram"></i>
+                </button>
+                <a href="https://t.me/share/url?url=https://sunakohorrorstories.vercel.app/hachishakusama.html&text=Hachishakusama%20-%20Japanese%20Horror%20Legend" 
+                   target="_blank" rel="noopener noreferrer" title="Telegram"
+                   class="w-9 h-9 rounded-full bg-sky-500/20 border border-sky-400/40 hover:bg-sky-500 text-sky-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?text=Read%20this%20story%20at%20https://sunakohorrorstories.vercel.app/hachishakusama.html" 
+                   target="_blank" rel="noopener noreferrer" title="WhatsApp"
+                   class="w-9 h-9 rounded-full bg-emerald-600/20 border border-emerald-500/40 hover:bg-emerald-600 text-emerald-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <span id="copyMsg" class="text-[11px] text-green-400 hidden animate-pulse">Link copied to clipboard!</span>
+        </div>
+
+        <!-- BOTTOM ADSENSE AD -->
+        <div class="mt-8 mx-auto w-full max-w-[728px] min-h-[90px] glass-card rounded-lg overflow-hidden flex items-center justify-center">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%; height:90px"
+                 data-ad-client="ca-pub-6737021640296795"
+                 data-ad-slot="auto"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- BACK BUTTON TO HOME -->
+        <div class="mt-10 text-center">
+            <a href="index.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-red-950 to-red-900 hover:from-red-800 hover:to-red-700 text-red-200 hover:text-white border border-red-700/50 rounded-full px-8 py-3 text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:shadow-red-900/50 hover:scale-105">
+                <i class="fa-solid fa-ghost"></i> Read More Horror Stories
+            </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-black/90 border-t border-red-950 py-6 px-4 text-xs text-gray-500 text-center space-y-3">
+        <div class="flex justify-center gap-4 text-gray-400 flex-wrap">
+            <a href="about.html" class="hover:text-red-400 transition-colors">About Us</a>
+            <span>•</span>
+            <a href="privacy.html" class="hover:text-red-400 transition-colors">Privacy Policy</a>
+            <span>•</span>
+            <a href="terms.html" class="hover:text-red-400 transition-colors">Terms of Service</a>
+            <span>•</span>
+            <a href="contact.html" class="hover:text-red-400 transition-colors">Contact Us</a>
+        </div>
+        <p>&copy; 2026 SUNAKO HORROR STORIES. All rights reserved.</p>
+    </footer>
+
+    <!-- JS ANIMATION FOR DARK PARTICLES & COPY LINK -->
+    <script>
+        // DARK SMOKE PARTICLES CANVAS SCRIPT
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const particles = [];
+        const particleCount = 45;
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2.5 + 0.5;
+                this.speedY = -(Math.random() * 0.4 + 0.1);
+                this.speedX = (Math.random() - 0.5) * 0.2;
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+                if (this.y < 0 || this.x < 0 || this.x > canvas.width) {
+                    this.reset();
+                    this.y = canvas.height;
+                }
+            }
+            draw() {
+                ctx.fillStyle = `rgba(180, 20, 20, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // COPY LINK SCRIPT
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            const msg = document.getElementById('copyMsg');
+            msg.classList.remove('hidden');
+            setTimeout(() => msg.classList.add('hidden'), 2000);
+        }
+    </script>
+
+</body>
+</html>
