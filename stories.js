@@ -160,6 +160,18 @@ const stories = [
         author: "Anonymous",
         excerpt: "Three college students named Devin"
     
+    },
+                                {
+        id: "hagdan",
+        title: "THE JAPANESE TUNNEL BENEATH SOUTH KOREA",
+        cover: "https://i.imgur.com/x3nLOv8.jpg",
+        link: "tunnel.html",
+        category: "real-life",
+        lang: "english",
+        rating: "5.6",
+        author: "Han Ji-hoon",
+        excerpt: "Construction workers expanding an underground railway line discovered"
+    
     }
    
 ];
