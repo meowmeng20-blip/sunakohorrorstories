@@ -88,5 +88,17 @@ const stories = [
         author: "Rohelyo",
         excerpt: "Oo na. Oo na. Sasabihin ko na. Alisin niyo ang medalyon."
     
+    },
+        {
+        id: "hagdan",
+        title: "The Yuba County Five",
+        cover: "https://i.imgur.com/FNOJv1i.jpg",
+        link: "yuba.html",
+        category: "real-life",
+        lang: "english",
+        rating: "4.6",
+        author: "Jenny",
+        excerpt: "In February 1978, five young men from California"
+    
     }
 ];
