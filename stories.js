@@ -172,6 +172,19 @@ const stories = [
         author: "Han Ji-hoon",
         excerpt: "Construction workers expanding an underground railway line discovered"
     
+    },
+                                    {
+        id: "hagdan",
+        title: "Room 314 at the Ateneo de Manila University",
+        cover: "https://i.imgur.com/lchslyP.jpg",
+        link: "room314.html",
+        category: "real-life",
+        lang: "english",
+        rating: "6.6",
+        author: "Mary Josephine Clare V. Bautista",
+        excerpt: "When I was in college, I went to a university in the Philippines"
+    
+
     }
    
 ];
