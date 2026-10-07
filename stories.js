@@ -87,7 +87,7 @@ const stories = [
         rating: "4.6",
         author: "Rohelyo",
         excerpt: "Oo na. Oo na. Sasabihin ko na. Alisin niyo ang medalyon."
-    
+   
     },
         {
         id: "hagdan",
@@ -99,6 +99,18 @@ const stories = [
         rating: "4.6",
         author: "Jenny",
         excerpt: "In February 1978, five young men from California"
+    
+    },
+            {
+        id: "hagdan",
+        title: "The Voice in the Stairwell",
+        cover: "https://i.imgur.com/iWyfpax.jpg",
+        link: "yuba.html",
+        category: "real-life",
+        lang: "english",
+        rating: "2.6",
+        author: "Block",
+        excerpt: "This is a story I do not often tell. I promise, sincerely, "
     
     }
 ];
