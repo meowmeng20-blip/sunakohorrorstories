@@ -124,5 +124,17 @@ const stories = [
         author: "Stephie G Caguicla",
         excerpt: "May babae na maganda at maputi, siya si Ann. Nagtatrabaho siya bilang nurse"
     
+    },
+                    {
+        id: "hagdan",
+        title: "Hachishakusama: Eight Feet Tall",
+        cover: "https://i.imgur.com/DVw84Rz.jpg",
+        link: "hachi.html",
+        category: "real-life",
+        lang: "english",
+        rating: "5.6",
+        author: "Yumiko",
+        excerpt: "My grandparents lived in Japan."
+    
     }
 ];
