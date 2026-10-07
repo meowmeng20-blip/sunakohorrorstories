@@ -105,7 +105,7 @@ const stories = [
         id: "hagdan",
         title: "The Voice in the Stairwell",
         cover: "https://i.imgur.com/iWyfpax.jpg",
-        link: "yuba.html",
+        link: "stair.html",
         category: "real-life",
         lang: "english",
         rating: "2.6",
