@@ -1,54 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Policies - Sunako Horror Stories</title>
-    <meta name="description" content="Terms of Service and Policies for reading and sharing stories on Sunako Horror Stories.">
+    <title>Terms of Service - Sunako Horror Stories</title>
+    <meta name="description" content="Terms of Service and legal disclaimer for Sunako Horror Stories.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        body { background: #050000; color: #e5e7eb; font-family: 'Inter', sans-serif; }
         .font-creepster { font-family: 'Creepster', cursive; }
-        body { font-family: 'Inter', sans-serif; background: #080101; color: #e5e7eb; }
+        .glow-text { text-shadow: 0 0 12px rgba(220, 38, 38, 0.8); }
+        .glass-card {
+            background: rgba(15, 3, 3, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(185, 28, 28, 0.25);
+        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
-    <nav class="border-b border-red-950/60 bg-black/85 backdrop-blur-md sticky top-0 z-50 px-4 py-3">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2">
-                <i class="fa-solid fa-skull text-red-600 text-2xl"></i>
-                <span class="font-creepster text-2xl text-red-600 tracking-wider">SUNAKO</span>
+<body class="min-h-screen flex flex-col justify-between selection:bg-red-900 selection:text-white">
+
+    <!-- NAV BAR -->
+    <nav class="border-b border-red-950/80 bg-black/80 backdrop-blur-md px-4 py-3 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-red-500 font-semibold text-xs sm:text-sm hover:text-red-400 transition-all flex items-center gap-2 group">
+                <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i> Back to Home
             </a>
-            <div class="flex items-center gap-6 text-sm font-medium text-gray-300">
-                <a href="index.html" class="hover:text-red-500 transition-colors">Home</a>
-                <a href="about.html" class="hover:text-red-500 transition-colors">About Us</a>
-                <a href="contact.html" class="hover:text-red-500 transition-colors">Contact</a>
-            </div>
+            <a href="index.html" class="font-creepster text-xl sm:text-2xl text-red-600 tracking-wider glow-text flex items-center gap-2">
+                <i class="fa-solid fa-skull text-red-600 text-lg"></i> SUNAKO
+            </a>
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto px-4 py-12 flex-grow">
-        <h1 class="text-3xl font-bold text-red-500 mb-6">Terms & Policies</h1>
-        <div class="space-y-4 text-sm text-gray-300 leading-relaxed bg-zinc-950 p-6 rounded-lg border border-red-950">
-            <p>Welcome to <strong>Sunako Horror Stories</strong>. By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.</p>
+    <!-- MAIN CONTENT -->
+    <main class="max-w-3xl mx-auto px-4 py-12 w-full flex-grow">
+        <div class="glass-card rounded-2xl p-6 sm:p-10 border border-red-900/40 shadow-2xl space-y-6 text-sm text-gray-300 leading-relaxed">
+            <h1 class="text-3xl font-extrabold text-red-600 mb-2 tracking-tight glow-text">Terms of Service</h1>
+            <p class="text-xs text-gray-400">Last updated: 2026</p>
 
-            <h2 class="text-lg font-semibold text-red-400 mt-6">Content Use & Copyright</h2>
-            <p>All horror stories, urban legends, and original text published on Sunako Horror Stories are intended for reading and entertainment purposes only. Users are strictly prohibited from copying, scraping, republishing, or redistributing content without prior written permission from the website owner.</p>
+            <section class="space-y-2">
+                <h2 class="text-lg font-bold text-red-400">1. Acceptance of Terms</h2>
+                <p>By accessing sunakohorrorstories.vercel.app, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please refrain from using our website.</p>
+            </section>
 
-            <h2 class="text-lg font-semibold text-red-400 mt-6">User Conduct</h2>
-            <p>When interacting with or submitting content to Sunako Horror Stories, users agree not to upload or share any material that is unlawful, offensive, threatening, defamatory, or infringes on any third party's intellectual property rights.</p>
+            <section class="space-y-2">
+                <h2 class="text-lg font-bold text-red-400">2. Entertainment Disclaimer</h2>
+                <p>All horror stories, folklore, true encounters, and paranormal accounts published on Sunako Horror Stories are intended strictly for <strong>entertainment and educational storytelling purposes only</strong>. We do not promote superstition, harm, or violence.</p>
+            </section>
 
-            <h2 class="text-lg font-semibold text-red-400 mt-6">Disclaimer of Liability</h2>
-            <p>The stories presented on this site include real-life experiences, fictional horror, and community-submitted legends. Sunako Horror Stories does not guarantee the complete factual accuracy of all submissions and shall not be held liable for any damages arising from the use of this website.</p>
+            <section class="space-y-2">
+                <h2 class="text-lg font-bold text-red-400">3. Intellectual Property & User Content</h2>
+                <p>Stories submitted by readers remain the intellectual property of their respective authors or contributors. By submitting a story to Sunako Horror Stories, you grant us permission to publish, format, and display the content on our website.</p>
+            </section>
 
-            <h2 class="text-lg font-semibold text-red-400 mt-6">Changes to Terms</h2>
-            <p>We reserve the right to revise these terms at any time without prior notice. By continuing to use the site after changes are made, you accept the updated terms.</p>
+            <section class="space-y-2">
+                <h2 class="text-lg font-bold text-red-400">4. Modifications</h2>
+                <p>Sunako Horror Stories reserves the right to modify or revise these terms at any time without prior notice. Continued use of the website constitutes acceptance of updated terms.</p>
+            </section>
         </div>
     </main>
 
-    <footer class="bg-black border-t border-red-950/80 py-6 px-4 text-xs text-gray-500 text-center">
+    <!-- FOOTER -->
+    <footer class="bg-black/90 border-t border-red-950 py-6 px-4 text-xs text-gray-500 text-center space-y-3">
+        <div class="flex justify-center gap-4 text-gray-400 flex-wrap">
+            <a href="about.html" class="hover:text-red-400 transition-colors">About Us</a>
+            <span>•</span>
+            <a href="privacy.html" class="hover:text-red-400 transition-colors">Privacy Policy</a>
+            <span>•</span>
+            <a href="terms.html" class="hover:text-red-400 transition-colors text-red-500 font-semibold">Terms of Service</a>
+            <span>•</span>
+            <a href="contact.html" class="hover:text-red-400 transition-colors">Contact Us</a>
+        </div>
         <p>&copy; 2026 SUNAKO HORROR STORIES. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
