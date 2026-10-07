@@ -1,45 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHE WARNED HERE - Sunako Horror Stories</title>
+    <title>Dormitory: University Ghost Encounters - Sunako Horror Stories</title>
+
+    <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+    <meta name="google-site-verification" content="lv4RtdoLKmPmNdpNikOxBRWVyMSGaiJClQSBmCiJnh4" />
+
+    <!-- SEO META TAGS -->
+    <meta name="description" content="A chilling Tagalog true dormitory horror story about haunting 3 AM encounters, moving chairs, and phantom presences near a university campus.">
+    <meta name="keywords" content="Dormitory horror story, Tagalog true ghost story, university dorm hauntings, 3 AM paranormal encounter, kwentong kababalaghan, sunako horror, Philippine urban legend">
+    <meta name="author" content="Babalu (Submitted to Sunako)">
+    <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH / SOCIAL MEDIA META TAGS -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Sunako Horror Stories">
+    <meta property="og:title" content="Dormitory: University Ghost Encounters - True Horror Story">
+    <meta property="og:description" content="Creepy 3 AM encounters, moving plastic chairs, and mysterious figures inside a student dormitory.">
+    <meta property="og:image" content="https://i.imgur.com/48hdLAW.jpg">
+    <meta property="og:url" content="https://sunakohorrorstories.vercel.app/dormitory.html">
+    <meta property="og:locale" content="tl_PH">
+
+    <!-- TWITTER CARD META TAGS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dormitory: University Ghost Encounters">
+    <meta name="twitter:description" content="Creepy 3 AM encounters inside a student dormitory.">
+    <meta name="twitter:image" content="https://i.imgur.com/48hdLAW.jpg">
+
+    <!-- SCHEMA.org STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Dormitory: University Ghost Encounters",
+      "description": "A chilling Tagalog true dormitory horror story about haunting 3 AM encounters near a university campus.",
+      "image": "https://i.imgur.com/48hdLAW.jpg",
+      "inLanguage": "tl",
+      "author": {
+        "@type": "Person",
+        "name": "Babalu"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sunako Horror Stories",
+        "logo": "https://i.imgur.com/ZwjB8c0.jpg"
+      },
+      "mainEntityOfPage": "https://sunakohorrorstories.vercel.app/dormitory.html"
+    }
+    </script>
     
     <!-- GOOGLE ADSENSE SCRIPT -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6737021640296795"
          crossorigin="anonymous"></script>
 
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        body { background: #080101; color: #e5e7eb; font-family: 'Inter', sans-serif; }
+        body { 
+            background: #050000; 
+            color: #e5e7eb; 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden;
+        }
         .font-creepster { font-family: 'Creepster', cursive; }
+        .glow-text { text-shadow: 0 0 12px rgba(220, 38, 38, 0.8), 0 0 24px rgba(185, 28, 28, 0.4); }
+        .glow-box { box-shadow: 0 0 20px rgba(220, 38, 38, 0.15); }
+        
+        /* CANVAS BACKGROUND ANIMATION */
+        #bgCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* GLASS EFFECT CARDS */
+        .glass-card {
+            background: rgba(15, 3, 3, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(185, 28, 28, 0.25);
+        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
+<body class="min-h-screen flex flex-col justify-between selection:bg-red-900 selection:text-white">
+
+    <!-- ANIMATED BACKGROUND CANVAS -->
+    <canvas id="bgCanvas"></canvas>
 
     <!-- NAV BAR -->
-    <nav class="border-b border-red-950/60 bg-black/80 px-4 py-3 sticky top-0 z-50">
+    <nav class="border-b border-red-950/80 bg-black/80 backdrop-blur-md px-4 py-3 sticky top-0 z-50">
         <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-red-500 font-bold text-sm hover:underline">
-                &larr; Back to Home
+            <a href="index.html" class="text-red-500 font-semibold text-xs sm:text-sm hover:text-red-400 transition-all flex items-center gap-2 group">
+                <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i> Back to Home
             </a>
-            <span class="font-creepster text-xl text-red-600">SUNAKO</span>
+            <a href="index.html" class="font-creepster text-xl sm:text-2xl text-red-600 tracking-wider glow-text flex items-center gap-2">
+                <i class="fa-solid fa-skull text-red-600 text-lg animate-pulse"></i> SUNAKO
+            </a>
         </div>
     </nav>
+
+    <!-- TOP ADSENSE BANNER SLOT -->
+    <div class="max-w-3xl mx-auto w-full px-4 mt-6">
+        <div class="glass-card rounded-lg p-2 text-center text-xs text-gray-500 min-h-[60px] flex items-center justify-center overflow-hidden">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%; max-height:90px;"
+                 data-ad-client="ca-pub-6737021640296795"
+                 data-ad-slot="auto"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
 
     <!-- STORY CONTENT AREA -->
     <main class="max-w-3xl mx-auto px-4 py-8 w-full flex-grow">
 
-        <!-- HEADER -->
-        <h1 class="text-3xl font-bold text-red-500 mb-2">DORMITORY</h1>
-        <p class="text-xs text-gray-400 mb-6">Sender: Babalu | Tagalog Horror Story</p>
+        <!-- HEADER SECTION -->
+        <header class="mb-8 text-center sm:text-left">
+            <div class="inline-flex items-center gap-2 bg-red-950/80 text-red-400 border border-red-900/50 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-inner">
+                <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span> True Experience • Tagalog
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-red-600 mt-4 mb-3 tracking-tight glow-text leading-tight">
+                DORMITORY
+            </h1>
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs text-gray-400 border-b border-red-950/80 pb-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-pen text-red-500"></i> Sender: <strong class="text-gray-200">Babalu</strong></span>
+                <span>•</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-building text-red-500"></i> Student Dormitory Encounter</span>
+            </div>
+        </header>
 
-        <!-- COVER IMAGE -->
-        <img src="https://i.imgur.com/48hdLAW.jpg" class="w-full max-h-96 object-cover rounded-lg mb-6 border border-red-900/40" alt="Horror Story Cover">
+        <!-- COVER IMAGE WITH GLOW & SHADOW -->
+        <div class="relative mb-8 rounded-xl overflow-hidden border border-red-900/50 shadow-2xl glow-box group">
+            <img src="https://i.imgur.com/48hdLAW.jpg" class="w-full max-h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" alt="Dormitory Horror Story Cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+        </div>
 
-        <!-- CONTENT TEXT -->
-        <div class="space-y-4 text-gray-300 leading-relaxed text-base">
+        <!-- CONTENT ARTICLE -->
+        <article class="glass-card rounded-2xl p-6 sm:p-10 space-y-5 text-gray-300 leading-relaxed text-base sm:text-lg border border-red-900/30 shadow-2xl">
             <p>Sana ma post ito..</p>
 
             <p>Before, nung nag dodorm pa ko sa likod ng universiting pinapasukan ko, ang dami kong supernatural experiences sa room namen. Apat kameng tao sa room. Syempre sa una di pa kame close. Eh hindi pa kame nag-oorder before nung isang gallon na tubig, so puro bottles lang kame na mga liter-liter.</p>
@@ -48,34 +159,160 @@
 
             <p>Tapos bumalik nanaman yung mga bottles natutumba. Yung iba may mga laman pa (narinig ko yung water) so sabi ko nalang <em>"eto nanaman to"</em>. Tapos nung wala na yung sa mga bottles na tunog, yung chair naman sa room namen. Yung tunog na parang hinihila, plastic kasi yung chair tapos rinig na rinig mo yung pag kahila niya sa tiles. Hindi siya yung bastang hila lang eh. Parang may naka upo or may something na mabigat na nakapatong (kasi diba mag kaiba tunog nun, mas light yung tunog pag upuan lang talaga, at malakas yung pag kaka kaladkad pag may something heavy). So ayun, nag-pray ako.</p>
 
-            <p>After ilang minutes nag lakas loob ako na tanggalin yung kumot. Yung upuan nasa tabi ng kama ko na. Kinuha ko yung bible sa may gilid ng kama ko. Nag basa ko for 5 minutes siguro. Then sabi ko <em>"okay na ko. Pwede na ko matulog."</em> Nung nag talukbong na ulit ako ng kumot, may naramdaman akong presence na nakatayo sa may bandang ulunan ng kama ko. Alam niyo yung ramdam na ramdam kong nahinga pa yung tao na na-vivision ko na lalake siyang naka coat. At nakatingin saken ng masama. Naiyak na ko that time tapos nag dasal ako ng nag dasal hanggang sa nakayanan ko na at nakatulog na ko.</p>
+            <!-- HIGHLIGHTED ENCOUNTER BOX -->
+            <div class="my-6 pl-4 border-l-4 border-red-600 bg-red-950/40 p-5 rounded-r-xl text-gray-200 italic text-sm space-y-3 shadow-inner">
+                <p class="text-xs text-red-400 font-semibold uppercase tracking-wider not-italic mb-1"><i class="fa-solid fa-ghost text-red-500"></i> Ang Presence sa Ulunan:</p>
+                <p>"After ilang minutes nag lakas loob ako na tanggalin yung kumot. Yung upuan nasa tabi ng kama ko na. Kinuha ko yung bible sa may gilid ng kama ko. Nag basa ko for 5 minutes siguro. Then sabi ko 'okay na ko. Pwede na ko matulog.' Nung nag talukbong na ulit ako ng kumot, may naramdaman akong presence na nakatayo sa may bandang ulunan ng kama ko..."</p>
+                <p class="text-red-300 font-semibold">"Alam niyo yung ramdam na ramdam kong nahinga pa yung tao na na-vivision ko na lalake siyang naka coat. At nakatingin saken ng masama."</p>
+            </div>
+
+            <p>Naiyak na ko that time tapos nag dasal ako ng nag dasal hanggang sa nakayanan ko na at nakatulog na ko.</p>
 
             <p>Kinwento ko agad sa roommates ko pag gising namen ng umaga.</p>
 
             <p>So ayun ilang araw na nakaka daan. One night nagising nalang ako na wala na yung mga roommates ko. Natakot ako. Ginawa ko nag patugtog ako sa phone ko ng masayang song. Then out of nowhere, biglang sumara ng malakas yung pinto ng cr namen as in malakas, na para pang may galit ang nagsara. Kinabahan na ko kasi wala namang window sa cr para sumara yun mag isa. Tapos sarado naman mga windows namen sa room. Na-e-envision ko na na may babaeng nagapang sa floor (sa position kasi ng kama ko, di kita yung pinto ng cr) na papunta saken. So bago ko pa man makita yun tumakbo na ko palabas at nakita ko sarado na nga yung pinto sa cr.</p>
 
-            <p>Pumunta ko kay kuyang guard sa 1st floor nung tinanong ko kung nasan sila, sabi niya lumabas daw roommates ko ang paalam daw is mag papa tahi ng uniform sa kanto. So kinwento ko kay kuyang guard sabi niya saken <em>"wag mo nalang pansinin. Di ka naman aanuhin niyang mga yan"</em> so confirmed nga na meron talagang mumu sa dorm namen. Di na ko umakyat sa room at inantay ko nalang sila sa baba. Tapos kinwento ko na sakanila pag uwi nila.</p>
+            <!-- GUARD CONFIRMATION BOX -->
+            <div class="my-6 pl-4 border-l-4 border-red-600 bg-red-950/40 p-5 rounded-r-xl text-gray-200 italic text-sm space-y-3 shadow-inner">
+                <p class="text-xs text-red-400 font-semibold uppercase tracking-wider not-italic mb-1"><i class="fa-solid fa-shield-halved text-red-500"></i> Sabi ni Kuya Guard:</p>
+                <p class="text-gray-300 font-semibold">"Wag mo nalang pansinin. Di ka naman aanuhin niyang mga yan."</p>
+                <p class="text-xs text-gray-400 not-italic">— Confirmed nga na meron talagang mumu sa dorm namen.</p>
+            </div>
 
-            <p class="text-sm text-red-400 font-semibold mt-4">P.S.<br>Meron ba sa inyong nag kakatotoo yung pinapanaginipan? Ganun kasi ko eh.</p>
+            <!-- FINAL QUESTION BOX -->
+            <div class="mt-8 p-6 border border-red-600/40 bg-gradient-to-r from-red-950/60 to-black rounded-xl relative overflow-hidden shadow-xl">
+                <i class="fa-solid fa-quote-left text-red-900/30 text-5xl absolute -top-2 -left-2"></i>
+                <p class="text-sm sm:text-base text-red-300 font-semibold italic relative z-10 leading-relaxed">
+                    P.S. Meron ba sa inyong nag kakatotoo yung pinapanaginipan? Ganun kasi ko eh.
+                </p>
+            </div>
+        </article>
+
+        <!-- SOCIAL SHARE BUTTONS -->
+        <div class="mt-10 pt-6 border-t border-red-950/80 flex flex-col items-center gap-3">
+            <span class="text-xs text-gray-400 font-medium tracking-widest uppercase">Share this story</span>
+            <div class="flex items-center justify-center gap-3">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://sunakohorrorstories.vercel.app/dormitory.html" 
+                   target="_blank" rel="noopener noreferrer" title="Facebook"
+                   class="w-9 h-9 rounded-full bg-blue-600/20 border border-blue-500/40 hover:bg-blue-600 text-blue-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://sunakohorrorstories.vercel.app/dormitory.html&text=Read%20this%20scary%20dorm%20story:%20Dormitory" 
+                   target="_blank" rel="noopener noreferrer" title="X (Twitter)"
+                   class="w-9 h-9 rounded-full bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 text-gray-300 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <button onclick="copyLink()" title="Copy Link for Instagram"
+                        class="w-9 h-9 rounded-full bg-pink-600/20 border border-pink-500/40 hover:bg-pink-600 text-pink-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-instagram"></i>
+                </button>
+                <a href="https://t.me/share/url?url=https://sunakohorrorstories.vercel.app/dormitory.html&text=Dormitory%20-%20Ghost%20Story" 
+                   target="_blank" rel="noopener noreferrer" title="Telegram"
+                   class="w-9 h-9 rounded-full bg-sky-500/20 border border-sky-400/40 hover:bg-sky-500 text-sky-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?text=Read%20this%20story%20at%20https://sunakohorrorstories.vercel.app/dormitory.html" 
+                   target="_blank" rel="noopener noreferrer" title="WhatsApp"
+                   class="w-9 h-9 rounded-full bg-emerald-600/20 border border-emerald-500/40 hover:bg-emerald-600 text-emerald-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <span id="copyMsg" class="text-[11px] text-green-400 hidden animate-pulse">Link copied to clipboard!</span>
         </div>
 
-        <!-- MALIIT AT SIMPLE LANG NA ADSENSE AD (SA DULO LANG) -->
-        <div class="mt-8 mx-auto w-full max-w-[728px] h-[90px] border border-red-900/20 bg-red-950/10 rounded overflow-hidden flex items-center justify-center">
+        <!-- BOTTOM ADSENSE AD -->
+        <div class="mt-8 mx-auto w-full max-w-[728px] min-h-[90px] glass-card rounded-lg overflow-hidden flex items-center justify-center">
             <ins class="adsbygoogle"
-                 style="display:inline-block;width:100%;height:90px"
+                 style="display:block; width:100%; height:90px"
                  data-ad-client="ca-pub-6737021640296795"
-                 data-ad-slot="auto"></ins>
+                 data-ad-slot="auto"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
             <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
 
+        <!-- BACK BUTTON TO HOME -->
+        <div class="mt-10 text-center">
+            <a href="index.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-red-950 to-red-900 hover:from-red-800 hover:to-red-700 text-red-200 hover:text-white border border-red-700/50 rounded-full px-8 py-3 text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:shadow-red-900/50 hover:scale-105">
+                <i class="fa-solid fa-ghost"></i> Read More Horror Stories
+            </a>
+        </div>
+
     </main>
 
     <!-- FOOTER -->
-    <footer class="text-center py-4 text-xs text-gray-600 border-t border-red-950/50">
-        &copy; 2026 Sunako Horror Stories
+    <footer class="bg-black/90 border-t border-red-950 py-6 px-4 text-xs text-gray-500 text-center">
+        <p>&copy; 2026 SUNAKO HORROR STORIES. All rights reserved.</p>
     </footer>
+
+    <!-- JS ANIMATION FOR DARK PARTICLES & COPY LINK -->
+    <script>
+        // DARK SMOKE PARTICLES CANVAS SCRIPT
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const particles = [];
+        const particleCount = 45;
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2.5 + 0.5;
+                this.speedY = -(Math.random() * 0.4 + 0.1);
+                this.speedX = (Math.random() - 0.5) * 0.2;
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+                if (this.y < 0 || this.x < 0 || this.x > canvas.width) {
+                    this.reset();
+                    this.y = canvas.height;
+                }
+            }
+            draw() {
+                ctx.fillStyle = `rgba(180, 20, 20, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // COPY LINK SCRIPT
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            const msg = document.getElementById('copyMsg');
+            msg.classList.remove('hidden');
+            setTimeout(() => msg.classList.add('hidden'), 2000);
+        }
+    </script>
 
 </body>
 </html>
