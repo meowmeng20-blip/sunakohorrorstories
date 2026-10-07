@@ -148,5 +148,18 @@ const stories = [
         author: "Dark Lord",
         excerpt: "We have never figured this out. And now, the three living witnesses"
     
+    },
+                            {
+        id: "hagdan",
+        title: "The Lake Accident: Cheating Death",
+        cover: "https://i.imgur.com/aSrYqJL.jpg",
+        link: "lake.html",
+        category: "real-life",
+        lang: "english",
+        rating: "4.6",
+        author: "Anonymous",
+        excerpt: "Three college students named Devin"
+    
     }
+   
 ];
