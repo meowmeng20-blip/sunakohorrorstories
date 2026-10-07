@@ -173,7 +173,7 @@ const stories = [
         excerpt: "Construction workers expanding an underground railway line discovered"
     
     },
-                                    {
+          {
         id: "hagdan",
         title: "Room 314 at the Ateneo de Manila University",
         cover: "https://i.imgur.com/lchslyP.jpg",
@@ -185,6 +185,18 @@ const stories = [
         excerpt: "When I was in college, I went to a university in the Philippines"
     
 
-    }
+    },
+          {
+        id: "hagdan",
+        title: "DON'T FIND THEM",
+        cover: "https://i.imgur.com/TYkPP3g.jpg",
+        link: "find.html",
+        category: "real-life",
+        lang: "tagalog",
+        rating: "4.3",
+        author: "EmengLance",
+        excerpt: "Mayroon akong third eye. Sige, tawanan niyo ako. Alam ko namang mahirap paniwalaan ito."
+    
+    }    
    
 ];
