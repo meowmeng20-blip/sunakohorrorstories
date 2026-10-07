@@ -63,28 +63,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        body { background: #080101; color: #e5e7eb; font-family: 'Inter', sans-serif; }
+        body { 
+            background: #050000; 
+            color: #e5e7eb; 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden;
+        }
         .font-creepster { font-family: 'Creepster', cursive; }
-        .glow-text { text-shadow: 0 0 10px rgba(220, 38, 38, 0.7); }
+        .glow-text { text-shadow: 0 0 12px rgba(220, 38, 38, 0.8), 0 0 24px rgba(185, 28, 28, 0.4); }
+        .glow-box { box-shadow: 0 0 20px rgba(220, 38, 38, 0.15); }
+        
+        /* CANVAS BACKGROUND ANIMATION */
+        #bgCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* GLASS EFFECT CARDS */
+        .glass-card {
+            background: rgba(15, 3, 3, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(185, 28, 28, 0.25);
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-red-900 selection:text-white">
 
+    <!-- ANIMATED BACKGROUND CANVAS -->
+    <canvas id="bgCanvas"></canvas>
+
     <!-- NAV BAR -->
-    <nav class="border-b border-red-950/60 bg-black/85 backdrop-blur-md px-4 py-3 sticky top-0 z-50">
+    <nav class="border-b border-red-950/80 bg-black/80 backdrop-blur-md px-4 py-3 sticky top-0 z-50">
         <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-red-500 font-semibold text-xs sm:text-sm hover:text-red-400 transition-colors flex items-center gap-1">
-                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            <a href="index.html" class="text-red-500 font-semibold text-xs sm:text-sm hover:text-red-400 transition-all flex items-center gap-2 group">
+                <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i> Back to Home
             </a>
             <a href="index.html" class="font-creepster text-xl sm:text-2xl text-red-600 tracking-wider glow-text flex items-center gap-2">
-                <i class="fa-solid fa-skull text-red-600 text-lg"></i> SUNAKO
+                <i class="fa-solid fa-skull text-red-600 text-lg animate-pulse"></i> SUNAKO
             </a>
         </div>
     </nav>
 
     <!-- TOP ADSENSE BANNER SLOT -->
     <div class="max-w-3xl mx-auto w-full px-4 mt-6">
-        <div class="bg-red-950/10 border border-red-900/20 rounded p-2 text-center text-xs text-gray-500 min-h-[60px] flex items-center justify-center overflow-hidden">
+        <div class="glass-card rounded-lg p-2 text-center text-xs text-gray-500 min-h-[60px] flex items-center justify-center overflow-hidden">
             <ins class="adsbygoogle"
                  style="display:block; width:100%; max-height:90px;"
                  data-ad-client="ca-pub-6737021640296795"
@@ -100,26 +128,29 @@
     <!-- STORY CONTENT AREA -->
     <main class="max-w-3xl mx-auto px-4 py-8 w-full flex-grow">
 
-        <!-- HEADER -->
-        <header class="mb-6">
-            <span class="bg-red-950/80 text-red-400 border border-red-900/40 text-[10px] font-bold px-2.5 py-1 rounded uppercase tracking-wider">
-                True Experience • Tagalog
-            </span>
-            <h1 class="text-3xl sm:text-4xl font-bold text-red-500 mt-3 mb-2 leading-tight">ANNA</h1>
-            <p class="text-xs text-gray-400 flex items-center gap-3">
-                <span><i class="fa-solid fa-user text-red-500/80"></i> Sender: Arthur</span>
+        <!-- HEADER SECTION -->
+        <header class="mb-8 text-center sm:text-left">
+            <div class="inline-flex items-center gap-2 bg-red-950/80 text-red-400 border border-red-900/50 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-inner">
+                <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span> True Experience • Tagalog
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-red-600 mt-4 mb-3 tracking-tight glow-text leading-tight">
+                ANNA
+            </h1>
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs text-gray-400 border-b border-red-950/80 pb-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-pen text-red-500"></i> Sender: <strong class="text-gray-200">Arthur</strong></span>
                 <span>•</span>
-                <span><i class="fa-solid fa-heart text-red-500/80"></i> Tagalog Horror & Love Story</span>
-            </p>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-heart-crack text-red-500"></i> Tagalog Horror & Romance</span>
+            </div>
         </header>
 
-        <!-- COVER IMAGE -->
-        <div class="relative mb-6 rounded-lg overflow-hidden border border-red-900/40 shadow-lg">
-            <img src="https://i.imgur.com/O2VB6O0.jpg" class="w-full max-h-96 object-cover" alt="Anna Horror Story Cover">
+        <!-- COVER IMAGE WITH GLOW & SHADOW -->
+        <div class="relative mb-8 rounded-xl overflow-hidden border border-red-900/50 shadow-2xl glow-box group">
+            <img src="https://i.imgur.com/O2VB6O0.jpg" class="w-full max-h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" alt="Anna Horror Story Cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
         </div>
 
-        <!-- CONTENT TEXT -->
-        <article class="space-y-4 text-gray-300 leading-relaxed text-base sm:text-lg">
+        <!-- CONTENT ARTICLE -->
+        <article class="glass-card rounded-2xl p-6 sm:p-10 space-y-5 text-gray-300 leading-relaxed text-base sm:text-lg border border-red-900/30 shadow-2xl">
             <p>Anna and I have been bestfriends since we're still wearing diapers, magbestfriend din kasi parents namin. We're inseparable and we're partners in crime. Never pang nagkakaboyfriend si Anna, samantalang ako 2nd year highschool pa lang ata nanchichicks na ko eh. Hahaha</p>
 
             <p>Ewan ko ba dun, may mga manliligaw naman sya, sya lang talaga tong may ayaw. Mapa-mayaman, mahirap, macho, isang ubo na lang, gwapo, panget ayaw nya pa din! Tinatanong ko nga sya kung bakit ayaw nya magboyfriend, basta lang lagi nyang sagot sakin kaya hinayaan ko na lang..</p>
@@ -130,9 +161,11 @@
 
             <p>Nagising ako ng 10 am, wednesday, wala akong klase. Sobrang daming missed calls tsaka messages sa phone ko pero wala ni isang galing kay Anna. Mas kinabahan pa ko nung nakita kong puro sa parents namin galing yung messages tsaka missed calls. Nabitawan ko yung phone ko nung nabuksan ko na yung messages at nabasa ko na yung pinakahuli.</p>
 
-            <div class="my-4 pl-4 border-l-4 border-red-700 bg-red-950/20 p-4 rounded-r-lg text-gray-300 italic text-sm space-y-2">
-                <p><strong>From: Tita Shiela (11:45 pm)</strong><br>'Arthur? Kasama mo ba si Anna? It's almost midnight pero wala pa rin sya'</p>
-                <p><strong>From: Tita Shiela (8:30 am)</strong><br>'Arthur, wala na si Anna..'</p>
+            <!-- SMS HIGHLIGHT BOX -->
+            <div class="my-6 pl-4 border-l-4 border-red-600 bg-red-950/40 p-5 rounded-r-xl text-gray-200 italic text-sm space-y-3 shadow-inner">
+                <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-red-500"></i> <strong>From: Tita Shiela (11:45 pm)</strong><br>'Arthur? Kasama mo ba si Anna? It's almost midnight pero wala pa rin sya'</p>
+                <hr class="border-red-900/40">
+                <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-red-500"></i> <strong>From: Tita Shiela (8:30 am)</strong><br>'Arthur, wala na si Anna..'</p>
             </div>
 
             <p>Pinuntahan ko agad yung address ng morgue na tinext ng mommy ni Anna sakin. Pakiramdam ko tumigil yung pagtibok ng puso ko nung nakita ko syang nakahiga dun. Nilapitan ko sya tapos hinawakan yung kamay nya. Maputla na sya tsaka malamig na. Ang sabi sakin natagpuan daw sya sa talahiban malapit sa sakayan ng tricycle. Punit punit daw ang damit kaya palagay daw nila ay nirape sya tapos pinatay. 3 days lang ang burol ni Anna, pagkatapos nun ay inilibing na sya. Iyak ako ng iyak nun, hindi ko matanggap. Napapasobra na din ako sa pag inom ng alak, sobra kong sinisi ang sarili ko. Kung di ko sana sya inaway sana buhay pa sya ngayon, sana kasama pa namin sya.</p>
@@ -143,59 +176,49 @@
 
             <p>Nagpaparamdam pa rin si Anna after kong ikasal, mas madalas simula nung ipinanganak yung panganay ko. I often hear her singing lullabies to my little Timmy. Hinayaan ko lang sya, I feel happy whenever I feel her presence. Minsan nga nung kami lang ng anak ko sa bahay kasi yung wife ko umuwi ng province to visit her parents, nakatulog ako habang nagpapakulo ng feeding bottles. Paggising ko bigla ko yun naalala tapos nagpanic ako pero pagpunta ko sa kitchen nakapatay na yung kalan. I knew it was Anna, hindi pa rin sya nagsasawang bantayan kami. My wife knows about Anna pero di nya alam na kasama pa rin namin sya hanggang ngayon, siguro tsaka ko na lang sasabihin. I don't want her to freak out. Hinayaan ko lang until our college friend visited me sa bahay namin. May third eye si Russell kaya sure ako na nakikita nya si Anna. Kinausap ako ni Russell, he told me na matagal ng patay si Anna and she should rest now. Hindi na daw dapat sya nakikisalamuha sa mga buhay. Sabi nya I need to set Anna free, hindi daw makaalis si Anna dahil alam nyang ayaw ko pa syang pakawalan. The night after that, nagtirik ako ng kandila para kay Anna, I prayed for her and told her na I'm setting her free, na okay na ko kahit umalis na sya. I also thanked her for watching over me and my family through the years, especially my little Timmy. Humangin ng malakas nun then after that never na ulit nagparamdam/nagpakita si Anna.</p>
 
-            <div class="mt-6 p-4 border border-red-900/50 bg-red-950/30 rounded-lg">
-                <p class="text-sm sm:text-base text-red-400 font-semibold italic">"You will always be my one true love Anna, you will always have a special place in my heart. Hinding hindi kita makakalimutan, one day I'll tell my kids about you. Especially Timothy I'll tell him how selfless and loving you are. Hindi man tayo nagkatuluyan ngayon pero maybe in another life Anna, we will."</p>
+            <!-- FINAL DEDICATION BOX -->
+            <div class="mt-8 p-6 border border-red-600/40 bg-gradient-to-r from-red-950/60 to-black rounded-xl relative overflow-hidden shadow-xl">
+                <i class="fa-solid fa-quote-left text-red-900/30 text-5xl absolute -top-2 -left-2"></i>
+                <p class="text-sm sm:text-base text-red-300 font-semibold italic relative z-10 leading-relaxed">
+                    "You will always be my one true love Anna, you will always have a special place in my heart. Hinding hindi kita makakalimutan, one day I'll tell my kids about you. Especially Timothy I'll tell him how selfless and loving you are. Hindi man tayo nagkatuluyan ngayon pero maybe in another life Anna, we will."
+                </p>
             </div>
         </article>
 
-        <!-- SOCIAL SHARE BUTTONS (SMALL & COMPACT AT THE BOTTOM) -->
-        <div class="mt-8 pt-6 border-t border-red-950/60 flex flex-col items-center gap-3">
-            <span class="text-xs text-gray-400 font-medium tracking-wide">Share this story:</span>
+        <!-- SOCIAL SHARE BUTTONS (COMPACT & MODERN) -->
+        <div class="mt-10 pt-6 border-t border-red-950/80 flex flex-col items-center gap-3">
+            <span class="text-xs text-gray-400 font-medium tracking-widest uppercase">Share this story</span>
             <div class="flex items-center justify-center gap-3">
-                <!-- Facebook -->
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://sunakohorrorstories.vercel.app/anna.html" 
-                   target="_blank" rel="noopener noreferrer" 
-                   title="Share on Facebook"
-                   class="w-8 h-8 rounded-full bg-blue-600/20 border border-blue-500/40 hover:bg-blue-600 text-blue-400 hover:text-white flex items-center justify-center text-xs transition-all">
+                   target="_blank" rel="noopener noreferrer" title="Facebook"
+                   class="w-9 h-9 rounded-full bg-blue-600/20 border border-blue-500/40 hover:bg-blue-600 text-blue-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
-
-                <!-- X / Twitter -->
                 <a href="https://twitter.com/intent/tweet?url=https://sunakohorrorstories.vercel.app/anna.html&text=Read%20this%20scary%20story:%20Anna" 
-                   target="_blank" rel="noopener noreferrer" 
-                   title="Share on X (Twitter)"
-                   class="w-8 h-8 rounded-full bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 text-gray-300 hover:text-white flex items-center justify-center text-xs transition-all">
+                   target="_blank" rel="noopener noreferrer" title="X (Twitter)"
+                   class="w-9 h-9 rounded-full bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 text-gray-300 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
                     <i class="fa-brands fa-x-twitter"></i>
                 </a>
-
-                <!-- Instagram (Copy Link) -->
-                <button onclick="copyLink()" 
-                        title="Copy Link for Instagram"
-                        class="w-8 h-8 rounded-full bg-pink-600/20 border border-pink-500/40 hover:bg-pink-600 text-pink-400 hover:text-white flex items-center justify-center text-xs transition-all">
+                <button onclick="copyLink()" title="Copy Link for Instagram"
+                        class="w-9 h-9 rounded-full bg-pink-600/20 border border-pink-500/40 hover:bg-pink-600 text-pink-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
                     <i class="fa-brands fa-instagram"></i>
                 </button>
-
-                <!-- Telegram -->
                 <a href="https://t.me/share/url?url=https://sunakohorrorstories.vercel.app/anna.html&text=Anna%20-%20Horror%20Story" 
-                   target="_blank" rel="noopener noreferrer" 
-                   title="Share on Telegram"
-                   class="w-8 h-8 rounded-full bg-sky-500/20 border border-sky-400/40 hover:bg-sky-500 text-sky-400 hover:text-white flex items-center justify-center text-xs transition-all">
+                   target="_blank" rel="noopener noreferrer" title="Telegram"
+                   class="w-9 h-9 rounded-full bg-sky-500/20 border border-sky-400/40 hover:bg-sky-500 text-sky-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
                     <i class="fa-brands fa-telegram"></i>
                 </a>
-
-                <!-- WhatsApp -->
                 <a href="https://api.whatsapp.com/send?text=Read%20this%20story%20at%20https://sunakohorrorstories.vercel.app/anna.html" 
-                   target="_blank" rel="noopener noreferrer" 
-                   title="Share on WhatsApp"
-                   class="w-8 h-8 rounded-full bg-emerald-600/20 border border-emerald-500/40 hover:bg-emerald-600 text-emerald-400 hover:text-white flex items-center justify-center text-xs transition-all">
+                   target="_blank" rel="noopener noreferrer" title="WhatsApp"
+                   class="w-9 h-9 rounded-full bg-emerald-600/20 border border-emerald-500/40 hover:bg-emerald-600 text-emerald-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </div>
-            <span id="copyMsg" class="text-[10px] text-green-400 hidden">Link copied to clipboard!</span>
+            <span id="copyMsg" class="text-[11px] text-green-400 hidden animate-pulse">Link copied to clipboard!</span>
         </div>
 
         <!-- BOTTOM ADSENSE AD -->
-        <div class="mt-8 mx-auto w-full max-w-[728px] min-h-[90px] border border-red-900/20 bg-red-950/10 rounded overflow-hidden flex items-center justify-center">
+        <div class="mt-8 mx-auto w-full max-w-[728px] min-h-[90px] glass-card rounded-lg overflow-hidden flex items-center justify-center">
             <ins class="adsbygoogle"
                  style="display:block; width:100%; height:90px"
                  data-ad-client="ca-pub-6737021640296795"
@@ -207,29 +230,84 @@
             </script>
         </div>
 
-        <!-- NAVIGATION TO OTHER STORIES / HOME -->
-        <div class="mt-8 text-center">
-            <a href="index.html" class="inline-block bg-red-950/60 hover:bg-red-700 text-red-300 hover:text-white border border-red-800/40 rounded-full px-6 py-2.5 text-xs font-semibold transition-all shadow-md">
-                <i class="fa-solid fa-ghost mr-2"></i> Read More Horror Stories
+        <!-- BACK BUTTON TO HOME -->
+        <div class="mt-10 text-center">
+            <a href="index.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-red-950 to-red-900 hover:from-red-800 hover:to-red-700 text-red-200 hover:text-white border border-red-700/50 rounded-full px-8 py-3 text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:shadow-red-900/50 hover:scale-105">
+                <i class="fa-solid fa-ghost"></i> Read More Horror Stories
             </a>
         </div>
 
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-black border-t border-red-950/80 py-6 px-4 text-xs text-gray-500 text-center">
+    <footer class="bg-black/90 border-t border-red-950 py-6 px-4 text-xs text-gray-500 text-center">
         <p>&copy; 2026 SUNAKO HORROR STORIES. All rights reserved.</p>
     </footer>
 
-    <!-- COPY LINK SCRIPT FOR INSTAGRAM -->
+    <!-- JS ANIMATION FOR DARK PARTICLES & COPY LINK -->
     <script>
+        // DARK SMOKE PARTICLES CANVAS SCRIPT
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const particles = [];
+        const particleCount = 45;
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2.5 + 0.5;
+                this.speedY = -(Math.random() * 0.4 + 0.1);
+                this.speedX = (Math.random() - 0.5) * 0.2;
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+                if (this.y < 0 || this.x < 0 || this.x > canvas.width) {
+                    this.reset();
+                    this.y = canvas.height;
+                }
+            }
+            draw() {
+                ctx.fillStyle = `rgba(180, 20, 20, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // COPY LINK SCRIPT
         function copyLink() {
             navigator.clipboard.writeText(window.location.href);
             const msg = document.getElementById('copyMsg');
             msg.classList.remove('hidden');
-            setTimeout(() => {
-                msg.classList.add('hidden');
-            }, 2000);
+            setTimeout(() => msg.classList.add('hidden'), 2000);
         }
     </script>
 
