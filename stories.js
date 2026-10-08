@@ -303,15 +303,54 @@ const stories = [
     },
         {
         id: "midnight-passenger-route-9",
-        title: "Ogopogo",
-        cover: "https://i.imgur.com/gwWZSRp.jpg",
-        link: "ogopogo.html",
+        title: "La Befana",
+        cover: "https://i.imgur.com/NexcR6d.jpg",
+        link: "labefana.html",
+        category: "real-life",
+        lang: "english",
+        rating: "6.3",
+        author: "Matteo Rossi ",
+        location: "Italy",
+        excerpt: "If you ask anyone in Rome, Florence, or Venice about La Befana"
+    },
+    
+{
+        id: "midnight-passenger-route-9",
+        title: "Poveglia Island",
+        cover: "https://i.imgur.com/q8FHks0.jpg",
+        link: "poveglia.html",
+        category: "real-life",
+        lang: "english",
+        rating: "10.0",
+        author: "Rizky Ramadhan",
+        location: "Italy",
+        excerpt: "My name is Rizky. I’m thirty-one years old"
+    },
+    
+{
+        id: "midnight-passenger-route-9",
+        title: "Pontianak",
+        cover: "https://i.imgur.com/80rL5IE.jpg",
+        link: "pontianak.html",
         category: "real-life",
         lang: "english",
         rating: "7.0",
-        author: "Liam MacIntyre",
-        location: "Canada",
-        excerpt: "This happened last month, right as the summer tourist crowds were"
+        author: "Dimas Prasetyo",
+        location: "Malaysia",
+        excerpt: "My name is Dimas. I am thirty-four years old"
+    },
+    
+{
+        id: "midnight-passenger-route-9",
+        title: "Les Catacombes De Paris",
+        cover: "https://i.imgur.com/p2rP6mB.jpg",
+        link: "lesca.html",
+        category: "real-life",
+        lang: "english",
+        rating: "4.0",
+        author: "Julian Vance",
+        location: "France",
+        excerpt: "I am not a ghost hunter. I do not carry EMF meters, dowsing rods, or spirit boards."
     }
 
 
