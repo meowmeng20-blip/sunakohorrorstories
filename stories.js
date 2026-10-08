@@ -288,7 +288,31 @@ const stories = [
         author: "Somchai Vachiraporn",
         location: "Thailand",
         excerpt: "The legendary Siamese ghost story of Mae Nak Phra Khanong and her unyielding devotion from beyond the grave."
+    },
+        {
+        id: "midnight-passenger-route-9",
+        title: "Hantu Jeruk Purut",
+        cover: "https://i.imgur.com/EyXfv3m.jpg",
+        link: "purut.html",
+        category: "real-life",
+        lang: "english",
+        rating: "9.0",
+        author: "Dimas Prasetyo",
+        location: "Indonesia",
+        excerpt: "Everything changed on a brutally humid Tuesday night last month"
+    },
+        {
+        id: "midnight-passenger-route-9",
+        title: "Ogopogo",
+        cover: "https://i.imgur.com/gwWZSRp.jpg",
+        link: "ogopogo.html",
+        category: "real-life",
+        lang: "english",
+        rating: "7.0",
+        author: "Liam MacIntyre",
+        location: "Canada",
+        excerpt: "This happened last month, right as the summer tourist crowds were"
     }
 
-   
+
 ];
