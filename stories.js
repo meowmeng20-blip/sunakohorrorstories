@@ -351,6 +351,45 @@ const stories = [
         author: "Julian Vance",
         location: "France",
         excerpt: "I am not a ghost hunter. I do not carry EMF meters, dowsing rods, or spirit boards."
+    },
+    
+{
+        id: "midnight-passenger-route-9",
+        title: "Monte Cristo Honestead",
+        cover: "https://i.imgur.com/9QBxWGh.jpg",
+        link: "monte.html",
+        category: "real-life",
+        lang: "english",
+        rating: "3.9",
+        author: "Rizky Pratama",
+        location: "Australia",
+        excerpt: "I am not a ghost hunter. I do not carry EMF meters, dowsing rods, or spirit boards."
+    },
+    
+{
+        id: "midnight-passenger-route-9",
+        title: "Old Changi Hospital",
+        cover: "https://i.imgur.com/FzNlnWA.jpg",
+        link: "changi.html",
+        category: "real-life",
+        lang: "english",
+        rating: "8.9",
+        author: "Kevin Lee",
+        location: "Singapore",
+        excerpt: "I’m submitting this account to your platform"
+    },
+    
+{
+        id: "midnight-passenger-route-9",
+        title: "Waldniel Hostert (Abandoned Hospital Ayslum)",
+        cover: "https://i.imgur.com/k92Qi4H.jpg",
+        link: "hostert.html",
+        category: "real-life",
+        lang: "english",
+        rating: "6.9",
+        author: "Lukas Weber",
+        location: "Germany",
+        excerpt: "To understand what we encountered, one must first understand the dark history"
     }
 
 
