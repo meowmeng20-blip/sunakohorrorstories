@@ -132,15 +132,44 @@
     <!-- CONTENT SECTION -->
     <main class="max-w-7xl mx-auto px-4 flex-grow w-full mb-12" id="stories">
         
-        <!-- CATEGORY FILTERS -->
+        <!-- ALL STORIES & COUNTRY FILTER ONLY -->
         <div class="flex flex-wrap items-center justify-between gap-4 mb-8 border-b border-red-950/50 pb-4 sticky top-[60px] bg-black/70 backdrop-blur-md z-40 p-2 rounded-lg">
-            <div class="flex flex-wrap gap-2">
-                <button onclick="setCategory('all')" id="btn-all" class="filter-btn bg-red-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition-all">All Stories</button>
-                <button onclick="setCategory('tagalog')" id="btn-tagalog" class="filter-btn bg-red-950/40 hover:bg-red-900/50 text-gray-300 text-xs font-semibold px-4 py-1.5 rounded-full border border-red-900/30 transition-all">🇵🇭 Tagalog</button>
-                <button onclick="setCategory('english')" id="btn-english" class="filter-btn bg-red-950/40 hover:bg-red-900/50 text-gray-300 text-xs font-semibold px-4 py-1.5 rounded-full border border-red-900/30 transition-all">🌐 English</button>
-                <button onclick="setCategory('real-life')" id="btn-real-life" class="filter-btn bg-red-950/40 hover:bg-red-900/50 text-gray-300 text-xs font-semibold px-4 py-1.5 rounded-full border border-red-900/30 transition-all">
-                    <i class="fa-solid fa-fire text-orange-500 mr-1"></i> True Encounters
+            <div class="flex flex-wrap items-center gap-2">
+                <!-- ALL STORIES BUTTON -->
+                <button onclick="resetLocation()" id="btn-all" class="filter-btn bg-red-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition-all">
+                    All Stories
                 </button>
+
+                <!-- COUNTRY DROPDOWN FILTER -->
+                <div class="relative inline-block">
+                    <select id="locationSelect" onchange="filterStories()" class="bg-red-950/40 hover:bg-red-900/50 text-gray-300 text-xs font-semibold px-3 py-1.5 rounded-full border border-red-900/30 focus:outline-none focus:border-red-600 cursor-pointer transition-all">
+                        <option value="all" class="bg-zinc-900 text-gray-200">🌎 All Countries</option>
+                        <option value="Philippines" class="bg-zinc-900 text-gray-200">🇵🇭 Philippines</option>
+                        <option value="United States" class="bg-zinc-900 text-gray-200">🇺🇸 United States</option>
+                        <option value="Australia" class="bg-zinc-900 text-gray-200">🇦🇺 Australia</option>
+                        <option value="Canada" class="bg-zinc-900 text-gray-200">🇨🇦 Canada</option>
+                        <option value="China" class="bg-zinc-900 text-gray-200">🇨🇳 China</option>
+                        <option value="France" class="bg-zinc-900 text-gray-200">🇫🇷 France</option>
+                        <option value="Germany" class="bg-zinc-900 text-gray-200">🇩🇪 Germany</option>
+                        <option value="Hong Kong" class="bg-zinc-900 text-gray-200">🇭🇰 Hong Kong</option>
+                        <option value="India" class="bg-zinc-900 text-gray-200">🇮🇳 India</option>
+                        <option value="Indonesia" class="bg-zinc-900 text-gray-200">🇮🇩 Indonesia</option>
+                        <option value="Italy" class="bg-zinc-900 text-gray-200">🇮🇹 Italy</option>
+                        <option value="Japan" class="bg-zinc-900 text-gray-200">🇯🇵 Japan</option>
+                        <option value="Malaysia" class="bg-zinc-900 text-gray-200">🇲🇾 Malaysia</option>
+                        <option value="Mexico" class="bg-zinc-900 text-gray-200">🇲🇽 Mexico</option>
+                        <option value="New Zealand" class="bg-zinc-900 text-gray-200">🇳🇿 New Zealand</option>
+                        <option value="Saudi Arabia" class="bg-zinc-900 text-gray-200">🇸🇦 Saudi Arabia</option>
+                        <option value="Singapore" class="bg-zinc-900 text-gray-200">🇸🇬 Singapore</option>
+                        <option value="South Korea" class="bg-zinc-900 text-gray-200">🇰🇷 South Korea</option>
+                        <option value="Spain" class="bg-zinc-900 text-gray-200">🇪🇸 Spain</option>
+                        <option value="Taiwan" class="bg-zinc-900 text-gray-200">🇹🇼 Taiwan</option>
+                        <option value="Thailand" class="bg-zinc-900 text-gray-200">🇹🇭 Thailand</option>
+                        <option value="United Arab Emirates" class="bg-zinc-900 text-gray-200">🇦🇪 United Arab Emirates (UAE)</option>
+                        <option value="United Kingdom" class="bg-zinc-900 text-gray-200">🇬🇧 United Kingdom</option>
+                        <option value="Vietnam" class="bg-zinc-900 text-gray-200">🇻🇳 Vietnam</option>
+                    </select>
+                </div>
             </div>
             <span id="storyCount" class="text-xs text-gray-500">0 Stories Available</span>
         </div>
@@ -188,26 +217,64 @@
 
     <!-- 2. MAIN LOGIC SCRIPT -->
     <script>
-        let activeCategory = 'all';
+        // Auto-detect and add new countries from stories.js if they aren't in the list
+        function autoAddCustomCountries() {
+            const select = document.getElementById('locationSelect');
+            if (typeof stories !== 'undefined' && Array.isArray(stories)) {
+                const existingValues = Array.from(select.options).map(opt => opt.value.toLowerCase());
+                const newLocations = [...new Set(stories.map(s => s.location).filter(Boolean))];
+
+                newLocations.forEach(loc => {
+                    if (!existingValues.includes(loc.toLowerCase())) {
+                        const opt = document.createElement('option');
+                        opt.value = loc;
+                        opt.textContent = `📍 ${loc}`;
+                        opt.className = "bg-zinc-900 text-gray-200";
+                        select.appendChild(opt);
+                    }
+                });
+            }
+        }
+
+        function resetLocation() {
+            document.getElementById('locationSelect').value = 'all';
+            renderStories();
+        }
 
         function renderStories() {
             const grid = document.getElementById('storiesGrid');
             const searchVal = document.getElementById('searchInput').value.toLowerCase();
+            const selectedLocation = document.getElementById('locationSelect').value.toLowerCase();
             grid.innerHTML = '';
 
             const filtered = stories.filter(story => {
-                const matchesCat = activeCategory === 'all' || 
-                                  (activeCategory === 'tagalog' && story.lang === 'tagalog') ||
-                                  (activeCategory === 'english' && story.lang === 'english') ||
-                                  (activeCategory === 'real-life' && story.category === 'real-life');
+                const storyLoc = (story.location || '').toLowerCase();
                 
-                const matchesSearch = story.title.toLowerCase().includes(searchVal) || 
-                                      story.excerpt.toLowerCase().includes(searchVal);
+                // Matches country name
+                const matchesLocation = selectedLocation === 'all' || 
+                                         storyLoc.includes(selectedLocation) || 
+                                         selectedLocation.includes(storyLoc);
 
-                return matchesCat && matchesSearch;
+                const matchesSearch = (story.title || '').toLowerCase().includes(searchVal) || 
+                                      (story.excerpt || '').toLowerCase().includes(searchVal) ||
+                                      (story.location || '').toLowerCase().includes(searchVal) ||
+                                      (story.author || '').toLowerCase().includes(searchVal);
+
+                return matchesLocation && matchesSearch;
             });
 
             document.getElementById('storyCount').innerText = `${filtered.length} Stories Available`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 border border-red-950/40 rounded-lg bg-zinc-950/50">
+                        <i class="fa-solid fa-ghost text-4xl text-red-800 mb-3 animate-bounce"></i>
+                        <p class="text-sm text-gray-400 font-semibold">Walang nahanap na kuwento sa napiling bansa.</p>
+                        <p class="text-xs text-gray-600 mt-1">Subukang palitan ang bansa o mag-search sa search bar.</p>
+                    </div>
+                `;
+                return;
+            }
 
             filtered.forEach((story, index) => {
                 if(index === 4) {
@@ -248,9 +315,17 @@
                                         ${story.title}
                                     </h3>
                                 </a>
-                                <p class="text-[11px] text-red-400/80 mb-1.5 flex items-center gap-1">
-                                    <i class="fa-solid fa-user text-[9px]"></i> ${story.author}
+                                
+                                <!-- AUTHOR -->
+                                <p class="text-[11px] text-red-400/80 mb-0.5 flex items-center gap-1">
+                                    <i class="fa-solid fa-user text-[9px]"></i> ${story.author || 'Anonymous'}
                                 </p>
+
+                                <!-- LOCATION / COUNTRY BELOW AUTHOR -->
+                                <p class="text-[11px] text-gray-400 mb-2 flex items-center gap-1">
+                                    <i class="fa-solid fa-location-dot text-red-500 text-[9px]"></i> ${story.location || 'Unknown Location'}
+                                </p>
+
                                 <p class="text-xs text-gray-400 line-clamp-2 leading-relaxed">
                                     ${story.excerpt}
                                 </p>
@@ -267,23 +342,11 @@
             });
         }
 
-        function setCategory(cat) {
-            activeCategory = cat;
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.className = "filter-btn bg-red-950/40 hover:bg-red-900/50 text-gray-300 text-xs font-semibold px-4 py-1.5 rounded-full border border-red-900/30 transition-all";
-            });
-            
-            const activeBtn = document.getElementById(`btn-${cat}`);
-            if(activeBtn) {
-                activeBtn.className = "filter-btn bg-red-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition-all";
-            }
-            renderStories();
-        }
-
         function filterStories() {
             renderStories();
         }
 
+        autoAddCustomCountries();
         renderStories();
     </script>
 </body>
