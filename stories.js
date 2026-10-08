@@ -197,6 +197,18 @@ const stories = [
         author: "EmengLance",
         excerpt: "Mayroon akong third eye. Sige, tawanan niyo ako. Alam ko namang mahirap paniwalaan ito."
     
+    },
+              {
+        id: "hagdan",
+        title: "THE MAN ON THE RIGHT TRACK",
+        cover: "https://i.imgur.com/YSrnW6e.jpg",
+        link: "righttrack.html",
+        category: "real-life",
+        lang: "english",
+        rating: "4.0",
+        author: "A.R. Cruz",
+        excerpt: "Five days passed without incident. I sank into the easy rhythm of summer vacation—fishing"
+
     }    
    
 ];
