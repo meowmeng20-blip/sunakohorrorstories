@@ -9,10 +9,11 @@ const stories = [
         lang: "tagalog",
         rating: "4.9",
         author: "Leo",
-        excerpt: "Kinuwento lang sakin ng tito ng bestfriend ko sa amin.. Si Tito James. "
+        location: "Philippines",
+        excerpt: "Kinuwento lang sakin ng tito ng bestfriend ko sa amin.. Si Tito James."
     },
     {
-        id: "kalamansi-baso",
+        id: "she-warned-her",
         title: "She Warned Her",
         cover: "https://i.imgur.com/VRz7dgT.jpg",
         link: "shewarned.html",
@@ -20,10 +21,11 @@ const stories = [
         lang: "tagalog",
         rating: "5.0",
         author: "Weng",
+        location: "Philippines",
         excerpt: "With a smile I'm a freshman of UST"
     },
     {
-        id: "babaeng-pugot-ulo",
+        id: "dormitory",
         title: "Dormitory",
         cover: "https://i.imgur.com/IpfemTY.jpg",
         link: "dormitory.html",
@@ -31,10 +33,11 @@ const stories = [
         lang: "tagalog",
         rating: "4.8",
         author: "Babalu",
+        location: "Philippines",
         excerpt: "Before, nung nag dodorm pa ko sa likod ng universiting pinapasukan ko"
     },
     {
-        id: "kadena",
+        id: "anna",
         title: "Anna",
         cover: "https://i.imgur.com/GZQ4Ph2.jpg",
         link: "anna.html",
@@ -42,10 +45,11 @@ const stories = [
         lang: "tagalog",
         rating: "4.7",
         author: "Arthur",
+        location: "Philippines",
         excerpt: "Anna and I have been bestfriends since we're still wearing diapers"
     },
     {
-        id: "kwarto",
+        id: "kalamansi-chronicles",
         title: "Kalamansi And The Babasaging Baso Chronicles",
         cover: "https://i.imgur.com/zBiWu6h.jpg",
         link: "kalamansi.html",
@@ -53,10 +57,11 @@ const stories = [
         lang: "tagalog",
         rating: "4.9",
         author: "Hunter",
+        location: "Philippines",
         excerpt: "Mahalaga sakin ang kalamansi. Masustansya at nakapang aalis umay."
     },
     {
-        id: "haunted-house",
+        id: "amulet-dodong-bala",
         title: "The Amulet Of Dodong Bala",
         cover: "https://i.imgur.com/gLajBr1.jpg",
         link: "dodongbala.html",
@@ -64,10 +69,11 @@ const stories = [
         lang: "tagalog",
         rating: "4.8",
         author: "Jez Juarez",
+        location: "Philippines",
         excerpt: "We dared to spend a night in the abandoned 1920s mansion and never looked back..."
     },
     {
-        id: "swimming-pool-iloilo",
+        id: "huling-biyahe-aswang",
         title: "Ang Huling Biyahe Sa Pugad Ng Aswang",
         cover: "https://i.imgur.com/8Z9NFWw.jpg",
         link: "hulingbiyahe.html",
@@ -75,10 +81,11 @@ const stories = [
         lang: "tagalog",
         rating: "4.9",
         author: "Ka Banong Tv",
+        location: "Philippines",
         excerpt: "Ano? Ano ka eroplada? Ang lapit-lapit lang ng pupuntahan ka Lola."
     },
     {
-        id: "hagdan",
+        id: "dalawang-albularyo",
         title: "Dalawang Albularyo Nag Tulungan Para Puksain Ang Mambabarang",
         cover: "https://i.imgur.com/tDQK87r.jpg",
         link: "rohelyo.html",
@@ -86,11 +93,11 @@ const stories = [
         lang: "tagalog",
         rating: "4.6",
         author: "Rohelyo",
+        location: "Philippines",
         excerpt: "Oo na. Oo na. Sasabihin ko na. Alisin niyo ang medalyon."
-   
     },
-        {
-        id: "hagdan",
+    {
+        id: "yuba-county-five",
         title: "The Yuba County Five",
         cover: "https://i.imgur.com/GAH9wBN.jpg",
         link: "yuba.html",
@@ -98,11 +105,11 @@ const stories = [
         lang: "english",
         rating: "4.6",
         author: "Jenny",
+        location: "United States",
         excerpt: "In February 1978, five young men from California"
-    
     },
-            {
-        id: "hagdan",
+    {
+        id: "voice-in-stairwell",
         title: "The Voice in the Stairwell",
         cover: "https://i.imgur.com/iWyfpax.jpg",
         link: "yuba.html",
@@ -110,11 +117,11 @@ const stories = [
         lang: "english",
         rating: "4.6",
         author: "Block",
+        location: "United States",
         excerpt: "This is a story I do not often tell. I promise, sincerely, "
-    
     },
-                {
-        id: "hagdan",
+    {
+        id: "nurse-ann",
         title: "Nurse-Ann",
         cover: "https://i.imgur.com/hiLPfIv.jpg",
         link: "nurseann.html",
@@ -122,11 +129,11 @@ const stories = [
         lang: "tagalog",
         rating: "4.6",
         author: "Stephie G Caguicla",
+        location: "Philippines",
         excerpt: "May babae na maganda at maputi, siya si Ann. Nagtatrabaho siya bilang nurse"
-    
     },
-                    {
-        id: "hagdan",
+    {
+        id: "hachishakusama",
         title: "Hachishakusama: Eight Feet Tall",
         cover: "https://i.imgur.com/DVw84Rz.jpg",
         link: "hachi.html",
@@ -134,11 +141,11 @@ const stories = [
         lang: "english",
         rating: "5.6",
         author: "Yumiko",
+        location: "Japan",
         excerpt: "My grandparents lived in Japan."
-    
     },
-                        {
-        id: "hagdan",
+    {
+        id: "phantom-truck-nc",
         title: "The Phantom Truck of North Carolina",
         cover: "https://i.imgur.com/ZhPx9sN.jpg",
         link: "phantom.html",
@@ -146,11 +153,11 @@ const stories = [
         lang: "english",
         rating: "6.6",
         author: "Dark Lord",
+        location: "United States",
         excerpt: "We have never figured this out. And now, the three living witnesses"
-    
     },
-                            {
-        id: "hagdan",
+    {
+        id: "lake-accident",
         title: "The Lake Accident: Cheating Death",
         cover: "https://i.imgur.com/aSrYqJL.jpg",
         link: "lake.html",
@@ -158,11 +165,11 @@ const stories = [
         lang: "english",
         rating: "4.6",
         author: "Anonymous",
+        location: "United States",
         excerpt: "Three college students named Devin"
-    
     },
-                                {
-        id: "hagdan",
+    {
+        id: "japanese-tunnel-korea",
         title: "THE JAPANESE TUNNEL BENEATH SOUTH KOREA",
         cover: "https://i.imgur.com/x3nLOv8.jpg",
         link: "tunnel.html",
@@ -170,11 +177,11 @@ const stories = [
         lang: "english",
         rating: "5.6",
         author: "Han Ji-hoon",
+        location: "South Korea",
         excerpt: "Construction workers expanding an underground railway line discovered"
-    
     },
-          {
-        id: "hagdan",
+    {
+        id: "room-314-ateneo",
         title: "Room 314 at the Ateneo de Manila University",
         cover: "https://i.imgur.com/lchslyP.jpg",
         link: "room314.html",
@@ -182,12 +189,11 @@ const stories = [
         lang: "english",
         rating: "6.6",
         author: "Mary Josephine Clare V. Bautista",
+        location: "Philippines",
         excerpt: "When I was in college, I went to a university in the Philippines"
-    
-
     },
-          {
-        id: "hagdan",
+    {
+        id: "dont-find-them",
         title: "DON'T FIND THEM",
         cover: "https://i.imgur.com/TYkPP3g.jpg",
         link: "find.html",
@@ -195,11 +201,11 @@ const stories = [
         lang: "tagalog",
         rating: "4.3",
         author: "EmengLance",
+        location: "Philippines",
         excerpt: "Mayroon akong third eye. Sige, tawanan niyo ako. Alam ko namang mahirap paniwalaan ito."
-    
     },
-              {
-        id: "hagdan",
+    {
+        id: "man-on-right-track",
         title: "THE MAN ON THE RIGHT TRACK",
         cover: "https://i.imgur.com/YSrnW6e.jpg",
         link: "righttrack.html",
@@ -207,11 +213,11 @@ const stories = [
         lang: "english",
         rating: "4.0",
         author: "A.R. Cruz",
+        location: "Philippines",
         excerpt: "Five days passed without incident. I sank into the easy rhythm of summer vacation—fishing"
-
     },
-                  {
-        id: "hagdan",
+    {
+        id: "crimson-smile-slit-mouthed",
         title: "CRIMSON SMILE: THE TALE OF THE SLIT-MOUTHED WOMAN",
         cover: "https://i.imgur.com/InJwHPO.jpg",
         link: "slit.html",
@@ -219,11 +225,11 @@ const stories = [
         lang: "english",
         rating: "5.0",
         author: "Samson",
+        location: "Japan",
         excerpt: "It started as a rumor in the neighborhood"
-
     },
-                      {
-        id: "hagdan",
+    {
+        id: "midnight-passenger-route-9",
         title: "THE MIDNIGHT PASSENGER: A GHOST ON ROUTE 9",
         cover: "https://i.imgur.com/xaTwhSz.jpg",
         link: "passenger.html",
@@ -231,7 +237,7 @@ const stories = [
         lang: "english",
         rating: "7.0",
         author: "Randy",
+        location: "United States",
         excerpt: "The clock on the dashboard read 1:17 AM"
-
-    }   
+    }
 ];
