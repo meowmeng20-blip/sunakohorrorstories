@@ -137,5 +137,25 @@
     <loc>https://sunakohorrorstories.vercel.app/ogopogo.html</loc>
     <priority>0.8</priority>
   </url>
+  
+            <url>
+    <loc>https://sunakohorrorstories.vercel.app/labefana.html</loc>
+    <priority>0.8</priority>
+  </url>
+ 
+ <url>
+    <loc>https://sunakohorrorstories.vercel.app/poveglia.html</loc>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sunakohorrorstories.vercel.app/pontianak.html</loc>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://sunakohorrorstories.vercel.app/lesca.html</loc>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
