@@ -256,7 +256,7 @@ const stories = [
         id: "midnight-passenger-route-9",
         title: "El Charro Negro",
         cover: "https://i.imgur.com/kL2pkzv.jpg",
-        link: "elcahro.html",
+        link: "elcharo.html",
         category: "real-life",
         lang: "english",
         rating: "6.0",
