@@ -1,128 +1,390 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHE WARNED HERE - Sunako Horror Stories</title>
+    <title>KALAMANSI AND THE BABASAGING BASO CHRONICLES - Sunako Horror Stories</title>
+
+    <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+    <meta name="google-site-verification" content="lv4RtdoLKmPmNdpNikOxBRWVyMSGaiJClQSBmCiJnh4" />
+
+    <!-- SEO META TAGS -->
+    <meta name="description" content="Mga tunay na karanasan tungkol sa pamahiin ng kalamansi at babasaging baso laban sa mga aswang, lason, at kulam. Kwento ni Hunter.">
+    <meta name="keywords" content="Kalamansi Horror, Babasaging Baso, Aswang Stories, Kulam, Pinoy Creepypasta, Sunako Horror Stories, Tagalog Horror">
+    <meta name="author" content="Hunter (Submitted to Sunako)">
+    <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH / SOCIAL MEDIA META TAGS -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Sunako Horror Stories">
+    <meta property="og:title" content="KALAMANSI AND THE BABASAGING BASO CHRONICLES">
+    <meta property="og:description" content="Mahalaga sakin ang kalamansi. Masustansya at nakapang aalis umay. Di rin ako naalis ng bahay na walang kalamansing dala... Bakit? Ganto kasi yun kaibigan.">
+    <meta property="og:image" content="https://i.imgur.com/ET8EXEb.jpg">
+    <meta property="og:url" content="https://sunakohorrorstories.vercel.app/kalamansi-and-the-babasaging-baso-chronicles.html">
+    <meta property="og:locale" content="en_US">
+
+    <!-- TWITTER CARD META TAGS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KALAMANSI AND THE BABASAGING BASO CHRONICLES">
+    <meta name="twitter:description" content="Mga kwento ng kababalaghan, aswang, at proteksyon gamit ang kalamansi at baso.">
+    <meta name="twitter:image" content="https://i.imgur.com/ET8EXEb.jpg">
+
+    <!-- SCHEMA.org STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "KALAMANSI AND THE BABASAGING BASO CHRONICLES",
+      "description": "Mga tunay na karanasan tungkol sa pamahiin ng kalamansi at babasaging baso laban sa mga aswang, lason, at kulam.",
+      "image": "https://i.imgur.com/ET8EXEb.jpg",
+      "inLanguage": "tl",
+      "author": {
+        "@type": "Person",
+        "name": "Hunter"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sunako Horror Stories",
+        "logo": "https://i.imgur.com/ZwjB8c0.jpg"
+      },
+      "mainEntityOfPage": "https://sunakohorrorstories.vercel.app/kalamansi-and-the-babasaging-baso-chronicles.html"
+    }
+    </script>
     
     <!-- GOOGLE ADSENSE SCRIPT -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6737021640296795"
          crossorigin="anonymous"></script>
 
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        body { background: #080101; color: #e5e7eb; font-family: 'Inter', sans-serif; }
+        body { 
+            background: #050000; 
+            color: #e5e7eb; 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden;
+        }
         .font-creepster { font-family: 'Creepster', cursive; }
+        .glow-text { text-shadow: 0 0 12px rgba(220, 38, 38, 0.8), 0 0 24px rgba(185, 28, 28, 0.4); }
+        .glow-box { box-shadow: 0 0 20px rgba(220, 38, 38, 0.15); }
+        
+        /* CANVAS BACKGROUND ANIMATION */
+        #bgCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* GLASS EFFECT CARDS */
+        .glass-card {
+            background: rgba(15, 3, 3, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(185, 28, 28, 0.25);
+        }
+
+        /* RED HIGHLIGHT STYLING FOR HORROR EFFECT */
+        .horror-highlight {
+            color: #ef4444;
+            font-weight: 600;
+            text-shadow: 0 0 8px rgba(239, 68, 68, 0.3);
+        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
+<body class="min-h-screen flex flex-col justify-between selection:bg-red-900 selection:text-white">
+
+    <!-- ANIMATED BACKGROUND CANVAS -->
+    <canvas id="bgCanvas"></canvas>
 
     <!-- NAV BAR -->
-    <nav class="border-b border-red-950/60 bg-black/80 px-4 py-3 sticky top-0 z-50">
+    <nav class="border-b border-red-950/80 bg-black/80 backdrop-blur-md px-4 py-3 sticky top-0 z-50">
         <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-red-500 font-bold text-sm hover:underline">
-                &larr; Back to Home
+            <a href="index.html" class="text-red-500 font-semibold text-xs sm:text-sm hover:text-red-400 transition-all flex items-center gap-2 group">
+                <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i> Back to Home
             </a>
-            <span class="font-creepster text-xl text-red-600">SUNAKO</span>
+            <a href="index.html" class="font-creepster text-xl sm:text-2xl text-red-600 tracking-wider glow-text flex items-center gap-2">
+                <i class="fa-solid fa-skull text-red-600 text-lg animate-pulse"></i> SUNAKO
+            </a>
         </div>
     </nav>
+
+    <!-- TOP ADSENSE BANNER SLOT -->
+    <div class="max-w-3xl mx-auto w-full px-4 mt-6">
+        <div class="glass-card rounded-lg p-2 text-center text-xs text-gray-500 min-h-[60px] flex items-center justify-center overflow-hidden">
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%; max-height:90px;"
+                 data-ad-client="ca-pub-6737021640296795"
+                 data-ad-slot="auto"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
 
     <!-- STORY CONTENT AREA -->
     <main class="max-w-3xl mx-auto px-4 py-8 w-full flex-grow">
 
-        <!-- HEADER -->
-        <h1 class="text-3xl font-bold text-red-500 mb-2">KALAMANSI AND THE BABASAGING BASO CHRONICLES</h1>
-        <p class="text-xs text-gray-400 mb-6">Sender: Hunter | Tagalog Horror & Urban Legend Story</p>
+        <!-- HEADER SECTION -->
+        <header class="mb-8 text-center sm:text-left">
+            <div class="inline-flex items-center gap-2 bg-red-950/80 text-red-400 border border-red-900/50 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-inner">
+                <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span> True Horror • Tagalog
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-red-600 mt-4 mb-3 tracking-tight glow-text leading-tight uppercase">
+                KALAMANSI AND THE BABASAGING BASO CHRONICLES
+            </h1>
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs text-gray-400 border-b border-red-950/80 pb-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-pen text-red-500"></i> Sender: <strong class="text-gray-200">Hunter</strong></span>
+                <span>•</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-ghost text-red-500"></i> Aswang & Kulam</span>
+            </div>
+        </header>
 
-        <!-- COVER IMAGE -->
-        <img src="https://i.imgur.com/7m5x1bH.jpg" class="w-full max-h-96 object-cover rounded-lg mb-6 border border-red-900/40" alt="Horror Story Cover">
-
-        <!-- CONTENT TEXT -->
-        <div class="space-y-4 text-gray-300 leading-relaxed text-base">
-            <p>Mahalaga sakin ang kalamansi. Masustansya at nakapang aalis umay. Di rin ako naalis ng bahay na walang kalamansing dala, kahit isa man lang. Maging sa basong aking pag iinuman ako'y pihikan, gusto ko babasagin lamang, ayoko ng plastic. Bakit? Ganto kasi yun kaibigan.</p>
-
-            <p>Probinsya, expected mo fiesta diba? Laging ganon lalo pagpatak ng buwan ng April hanggang May, mananawa ka sa karne. Si Butch, inaya kami nila Kulas na pumuntang fiesta sa Brgy *toot*. Ayokong banggitin pangalan, mahirap na. Basta malayo sya sa town proper, malayong malayo. Dahil sa wala naman akong ginagawa, sumama ako. Tawanan kami sa daan, kasi nga anlayo. Kahit kumain kami ng pagkarami rami, matatagtag rin pag uwi namin, lubak kasi yung daan saka malayo nga.</p>
-
-            <p>Pagdating namin, pinakain na kami nung tropa namin. Naka ugalian ko na, pag kumakain ako sa ibang bahay, uunahin kong uminom ng tubig. Pipili ako ng babasagin na baso o kaya cup. Ipapailalim ko yung isang kamay ko don, saka ipipihit ko pakaliwa pakanan yung baso. Pag nabasag kasi, ibig sabihin may lason. Hindi ko na kasi matandaan kung sa kanan ba o kaliwa, kaya both ways ko ginagawa. Turo sakin ni Roger, ganon kasi sya. Nakaugalian na rin nya, turo naman sa kanya ng lolo nya sa probinsya nila, ang probinsya nya somewhere in Mindanao. Hindi naman nabasag. Isa pa tropa namin yung nag imbita, pero kasi nakasanayan ko na nga, mismong sa bahay namin ganon ako.</p>
-
-            <p>Pagkatapos kumain, pumunta kaming basketball court sa barangay nila, may sayawan, party party. Tawa kami ng tawa nila Kulas kay Butch kasi may isinasayaw syang babae, masyadong maarte, parang diring diri sa tropa namin. Nung natapos, naglakad kami pauwi sa kanila. Maliit lang yung baryo, magkakakilala mga tao. Fiesta pa man din, kaya halos lahat ng dayo gusto nila kumain sa bawat bahay. Nakangiti kaming tumatanggi pero may isang matandang babae yung mapilit, kahit yung tropa naming taga ron hindi makatanggi. Kaya sabi ni Butch pagbigyan kasi nakakahiya naman.</p>
-
-            <p>Yung bahay non nasa gitna ng bukid. Halatang bago pa yung bahay at di pa tapos kasi wala pang palitada. May mga tanim na kalamansi don sa may papasok, may dalawang bahay pang mararaanan bago yung bahay non. Natuwa ako don sa mga kalamansi kasi ang lalaki. Namitas ako ng apat, tig iisa kami. Nauuna yung matanda, ang bilis nya nga maglakad. Binigay ko isa isa sa kanila yung kalamansi.</p>
-
-            <p><em>"Bakit to?"</em> Si Butch.</p>
-            <p><em>"Baka karne ng tao yung ipakain satin. Just in case lang"</em> Biro ko. Di ko alam na magkakatotoo pala, nagdilang anghel ako, wew.</p>
-
-            <p>Turo din yon sakin nung naging kaibigan ko sa manila. Pero mas nakasanayan ko yung sa may baso. Kwentuhan kami habang nasa daan. Yung tropa namin, si Jebon, sabi nya yung matanda nagtitinda raw yun ng bagoong sa may bayan. Matagal na raw, kasing edad ng lola nya. Yung lola nya buhay pa naman, pero bed ridden na. Kaya naamaze kami kay lola kasi ang liksi pang kumilos.</p>
-
-            <p>Pagkarating don sa kanila, pagkaupo namin sa mesa, tumawag yung mama ni Jebon, tinatanong kung nasaan kami. Hinahainan kami nung anak nung matanda ng pansit. Sinabi ni Jebon na sumaglit lang kami don sa bahay ng matanda. Hinintay kong maghain sila ng tubig, habang ginagawa ko yung routine ko, pansin ko nakatingin sakin yung anak. Nung naubos yung pansit, manok tyaka kikiam sahog. Sunod naman kanin tyaka sisig. Tumatanggi na kami non, kahit ang sarap tignan nung sisig. Kaya ang ginawa nung matanda, ibinalot na lang nya yung sisig.</p>
-
-            <p>Pagbalik namin kila Jebon, yung ate nya inaya na kaming uminom. Pero si Kulas hindi namin pinainom, sya kasi driver kaya good boy talaga yon. Si Butch inilagay nya yung sisig sa may plato. Ako naman, naghanap akong sili saka tiniris ko saka yung kalamansi ko, hinati ko saka ko binudbod don. Habang hinahalo ko, parang may nagbago don sa sisig. Naging parang may buhok buhok. Pinagalitan ko pa si Butch non kasi baka buhok nya kasi maiikli, di naman pwedeng akin kasi mahaba buhok ko.</p>
-
-            <p>Nung si Kulas na yung naghalo, paisa isa tinatanggal nya yung mga buhok, bigla syang naduwal. Tinanong namin kung bakit. Basta suka lang sya ng suka. Nung tinignan namin yung sisig, kulang na lang dukutin namin mga bituka namin mga bes. Nagkaroon ng kuko ng tao don sa sisig. Kinuha ko pa kay Butch yung kalamansing bigay ko, saka ko binudbod. Mas lalong dumami buhok, dun na sa karne mismo.</p>
-
-            <p>Pinagalitan kami nung mama ni Jebon, dapat raw hindi na kami sumama. Kasi kaya pala tinawagan nya si Jebon para maiiwas kami. Kahit alam na nya kung nasaan kami nila Jebon, tinawagan nya pa rin para malaman nung matanda na alam nya kung nasaan kami. May nakakita kasi samin na inaya nung matanda. May usap usapan na pala sa kanila na aswang yung pamilyang yon. Si Jebon lang hindi naniniwala. Takot na takot kaming umuwi non kaya don na kami natulog. Sinunog namin yung sisig. Ang nakakadiri pa, yung asawa pala nung anak ni Lola kamamatay lang, close casket beks, imaginin nyo na.</p>
-
-            <p>Hanggang nung 2014 nakikita ko yung matanda sa palengke. Madalas pag nakikita nya ako, binibigyan nya ako ng libreng bagoong, home made daw nya beks. Yung mga kapwa nya tindera, pasikreto akong iniilingan. One time pa nga, may sumunod pa talaga sakin para sabihan ako. Akala nila hindi ako aware. Pero hindi nila alam, sa twing bibigyan ako non ni Lola, babasagin ko yung lalagyan.</p>
-
-            <p>Second time naman nangyari sa Manila, tumigil muna ko sa college, nagdecide akong magwork muna. Nagwowork ako sa call center non, booming pa lang non ang cc satin. Nung yung isang kateam ko, nag aya sa kanila. Don na lang daw kami maglunch sa kanila. Sige naman kami. Sa may Caloocan sila, dapat ang mangyayari, don na rin kami matutulog bago yung pasok namin kasi masyado ng hustle pag uuwi pa kami ng kanya kanyang bahay. Yung iba kasi QC pa, ako naman Paco pa. Pero nangyari nga ito.</p>
-
-            <p>Di pa tapos magluto non nung dumating kami. Inom muna ng rc tyaka kain ng biscuit. So dahil nga sa nangyari, lagi na ko may dalang kalamansi. Ginagawa ko pa rin naman yung sa may baso. May isa akong ka team na nahahalata na yung 'mannerism' ko sa may baso. Kaya kwinento ko sa kanya lahat lahat, kumakain kami non sa chowking nung nagtanong sya. Naghain yung tatay nung nag imbita, si Mae, ng kinilaw na karne. Nakakita na ko ng ganon pero nagtataka ako non kung bakit mamula mula yung karne.</p>
-
-            <p><em>"Galing kasing probinsya namin yung karne, native na baboy kaya ganyan"</em> sabi nung tatay. Gusto ko sanang sabihin, opo alam ko po yung itsura ng native na baboy, maitim, maliit, pero hindi si Binay. Pag nakakakita ako non sa gabi, binabato ko kahit nasa kulungan, mukha kasing aswang.</p>
-
-            <p>Ako kasi hindi ako fan ng kinilaw na karne, kung kinilaw na isda yon, uubusin ko pa. Pero wala ayoko talaga ng niluto lang sa sukang karne. Yung dalawa naming kasamang lalaki, kumain sila, may mga bisita rin na iba bukod samin. Nakapwesto kami sa may gilid ng bahay, pahaba yung mesa. Anim kami, pang pito yung si Mae. Hindi nya kami maasikaso kasi marami silang bisita, puno ng tao yung buong bahay nila tyaka bakuran. Yung part na yun ng caloocan, mapuno eh, basta parang nasa probinsya ka rin lang.</p>
-
-            <p>Nung naghain na ng kanin tyaka ulam, una kong tinirada yung inihaw na isda. Nanghingi yung isa naming kasama kay Mae ng kalamansi para sana ilagay sa may toyo na sawsawan. Pero wala daw. Kaya ako sabi ko meron ako. Bigla na lang umalis si Mae. Sabi nung isa pa naming kasama, naoffend ko ata, girl scout daw kasi ako masyado. Wala talaga sa isip ko na may mangyayaring di kanais nais, syempre mababait naman sila, lalo si Mae, ako yung parang bunso sa grupo, sya naman yung umaalalay sakin nung bago pa lang ako.</p>
-
-            <p>Pero kasi out of habit na yung ginagawa ko, nakasanayan ko na nga. Kahit nga mama ko pinapagalitan na ako kakaganon ko, sino daw bang maglalason sakin sa sarili naming pamamahay. Ultimong kahit sa jollibee kung saan bida ang saya, to think na hindi naman babasagin yung baso don.</p>
-
-            <p>Yun na nga, nung nagdecide ako na karne naman ang kainin, tinusok ko ng tinidor yung kalamansi saka yung sinandok kong ulam binudbod ko doon. Tanghaling tapat, nagsitindigan mga balahibo ko sa katawan. Adobo yung sinandok ko, mukhang masarap nung una, pero nanlilimahid na bigla. Busy yung iba sa pagkain, kaya yung katabi ko lang ang nakapansin. Dapat magwawala na sya pero pinigilan ko. Pinaghanap ko sya ng pwedeng paglagyan nung sinandok ko, ang nahanap nya yung baunan nya ng tubig, dun namin nilagay. Saka ko pinatago sa kanya. Gusto ko ng magsuka suka non kasi sarap na sarap yung mga kasama namin. Kakapigil ko nagawa ko naman kahit papano. Pero yung katabi ko, hindi na nya kinaya, nagsuka sya ng nagsuka. Ako humahagod ng likod nya.</p>
-
-            <p><em>"Wag kang mag ooa be, kung gusto mo pang maranasan na magkarayuma"</em> sabi ko. Kasi diba malay ko ba kung anong pwede nilang gawin samin, pag nalaman nilang alam namin. Kaka 19 ko lang non, di ko pa nakaka daupang palad si Luke Evans, ayoko pa matigok. Dahil don sa pagsusuka nya, nakapagdahilan kaming dalawa na kunwari magpapa ospital sya. Pinapaiwan pa ng mama ni Mae yung iba samin kasi marami pa daw pagkain, pero buti na lang nagdalang hiya sila, sumama na sila samin.</p>
-
-            <p>Nung nakarating na kami samin, don kami tumuloy, pinakita nya yung nasa lalagyan nya ng tubig, habang tumitili. Nagsukasuka sila, grabe. Gusto nila iiwasan na namin si Mae, pero naisip ni Nat na wag kasi baka makahalata. Hayaan na lang daw. Pero yung iba kung pwede lang lumaklak sila ng zonrox o liquid sosa, ginawa na nila, matunaw lang yung karne sa tyan nila. Pinagpapasalamat nila, na hindi sila nakakain nung dinuguan. Ang sabi kasi nung nagtanong kami, may certain food na ipapakain sila sayo para maging katulad ka na nila. Kadalasan laman loob ng tao na dinasalan nila.</p>
-
-            <p>Sa pinsan ko naman to. Si Kuya Randy, isa sya don sa mga nag eespalto ng kalsada. Nagpupunta sila sa iba't ibang lugar sa bansa. Okay, hindi ako magbabanggit ng specific na lugar. Yung dalawang experience ko, naikwento ko sa kanila, yung iba tinawanan lang ako, pero sya tyaka yung dalawa ko pang pinsan eh ginagawa na rin yun twing mapapasabak sila ng kainan sa ibang lugar.</p>
-
-            <p>So ganon nga, last night na nila don sa may lugar na yon. Yung boss nila, binilinan sila pagkarating pa lang nila don na laging magdala ng sarili nilang tubig, wag silang bibili ng kahit na ano sa may baryong yon. Hindi ipinaliwanag nung boss nila kung bakit ganon. Ayun nga last night na nila don, may magandang babae daw galing don sa baryo na pumunta don sa tinutuluyan nilang bahay, na asa katabing baryo pa. Parang nahalina raw silang lahat, inimbitahan daw sila nung babae na pumunta sa bahay kasi nag-aaya ng inuman. Buti na lang sabi nung pinsan ko, nung dumating yung babae kakain pa lang sila, hawak nya pa yung kalamansi, nung magpunta sila don sa baryo na ginagawan nila ng kalsada.</p>
-
-            <p>Pagkarating don, pinaupo agad sila sa may inuman. Parang nagtaka sila lahat kasi don na sila natauhan. Buti yung isa, nakapagtext pa sa boss nila na nasa katabing bahay lang nung tinutuluyan nila. Yung boss nila nagreply, sinabihan daw silang mga kupal daw sila bat sila sumama. Yung pinsan ko, binudburan nya yung pulutan. Medyo madilim kaya hindi nya gaano unang maaninag kung may nagbago. Pero nung iniangat nya yung mangkok, kita nya may eyeball daw, may kuko, may karne rin na may buhok buhok pa. Sabi nung babae, kambing raw yon. Ilokano yung pinsan ko, hindi sya maloloko, alam nya yung amoy at texture ng karne ng kambing sa tingin pa lang. Hindi mo sya maloloko, nakipag away pa nga yon dati sa may kainan sa may Quiapo, sabi nung tindera, kambing daw yung ginamit sa pinapaitan, kaya mahal yung presyo. Pero nakipag away sya kasi, karne naman ng baka. Marahan nya lang na ibinaba yung mangkok. Butil butil pawis nya raw non. Halos hindi sya makagalaw, actually lahat sila. Kasi narealize na nila kung bakit pinagbabawalan sila ng boss nila nung umpisa pa lang na wag bumili ng kahit na ano sa baryong yon, pati kung bakit beast mode na beast mode yung boss nila nung sinabi nila na nandon sila. Aswang ata yung mga taga roon. Pinipilit silang pakainin nung pulutan. Pero todo tanggi sila. Yung pinsan ko, naging vegetarian daw non ng wala sa oras, makapag palusot lang.</p>
-
-            <p>Buti na lang dumating yung boss nila, ayaw pa sana silang paalisin. Pero sabi nung boss nila, pinapatawag sila sa bahay nung mayor nung lugar. Hindi na raw nakapalag yung mga tao don sa baryo. Pumunta talaga sila don sa bahay ng mayor. Don tinawanan sila ng tinawanan nung mayor. Doon na rin sila pinatulog.</p>
-
-            <p>Nung kwinento nya samin, laptrip kami sa kanya. Malaking tao kasi yung pinsan ko, maton kung maton. Sya yung tipong pag nakasalubong mo sa may kanto, iiwasan mo. Pero nung pagkauwi nya samin, iyak sya ng iyak sa nanay nya. Todo pasalamat rin sya sakin. Pero dahil don, never na kami bumili ng lutong ulam, ang mama ko na hindi naniniwala sa mga aswang eklavu na yan twing madaling araw na nabili ng karne. Yung makikita pa nya mismong pinapatas yung baboy.</p>
-
-            <p>Ito, nangyari lang saming magpipinsan, last year. Kasal ni Kuya Wang, pinsan namin. Syempre lalaki sya, yung handaan sa may babae. Ganon kasi samin. Two days bago yung kasal, nauna na kaming magpipinsan don sa probinsya ng babae, kasama si Kuya Wang. Kasama din namin yung kaibigan ni Kuya na hiniraman nya ng truck para don isakay yung mga gamit na kailangan. Sa norte pa rin naman yung probinsya, mula probinsya namin, dalawang oras ang byahe. Dagdag isang oras papunta sa mismong barangay nung babae. Nagbibiruan pa kami, kasi si Kuya Randy, parang isang sakong kalamansi ata yung dala nya. Sa bag rin nya, puro kalamansi. Kalamansi Man nga tawag na namin sa kanya, sa likod kasi ng bahay nila puro kalamansi na tanim. Akala namin magagamit namin yung kalamansi non, hindi pala, display lang.</p>
-
-            <p>Mababait yung side nung babae. Bondat na bondat kami, fresh na fresh yung mga seafoods na hinain nila. Nag eemote kaming lahat non sa may dagat nung pa gabi na. Sa may dalampasigan kasi malapit yung bahay nila. Hindi naman kami binawalan na kung ano pa man. Christian kasi sila, kaya wala gaanong pamahiin. Basta wag na lang raw kami magswimming pag naglakihan na yung alon kasi delikado na.</p>
-
-            <p>Ma niyog don, dahil namiss naming maglaro, sabi ni Kuya Wang, maglaro kaming taguan. Pero kasi yung iba samin takot, by pair ang ganap. Yun laro kami, dayaan pa kasi sila Kuya Wang tyaka Kuya Randy, maduduga talaga eversince. Nung napagod sa kakatakbo, nagkwentuhan na lang kami, yung fiance ni Kuya Wang, nagkwento na may isa syang tita na nasa dulong part ng lugar nila nakatira. Gusto nya sana na umattend yun sa kasal nila, kaso hindi ininvite ng parents nya. May away kasi, bata pa lang daw sya hindi na nag uusap yun tyaka parents nya. Kaya sabi ni Kuya Wang, kung gusto raw ba nya, puntahan namin. Sige naman si Ate, kaya umuwi lang saglit sya, kumuha ng invitation, saka kami lumarga pero hindi nya sinabi sa parents nya na kung san kami pupunta.</p>
-
-            <p>Maganda yung bahay, modern yung style. Halatang may datung yung may-ari. Perfect dreamhouse na overlooking the sea. Yung sumalubong samin, katiwala. Sa may garden andon yung tita ni ate. May edad na, pero yung halata mong walang gaanong stress sa buhay. Pinapasok kami sa loob pero nagpaiwan muna ako sa labas, magyoyosi eh. Nagpaiwan din kasama ko si Kuya Randy saka yung isa ko pang pinsan. Siguro mga thirty minutes, naaliw kami don sa koi pond sa may garden nung yung katiwala naghatid ng meryenda sa garden. Nakaugalian na nga, tapos ginaya pa ko nung dalawa pagpihit ko ng mabilisan sa may baso, biglang nabasag. Sa loob ng ilang taon na paggawa ko nun, yun yung unang beses na may mabasag na baso. Take note hindi lang ako yumg may nabasag na baso. Pati yung kila Kuya Randy. Tinginan lang kami sabay takbo sa loob. Hinila namin mga pinsan namin. Sakay agad sa truck. Minumura na kami ni Kuya Wang kasi ano daw trip namin, hindi namin sya pinapansin ni Kuya Randy na nagdadrive.</p>
-
-            <p>Di pa kami nakakalayo, nagsimula na silang mangisay saka magsuka. Imbes na sa bahay nila ate, diretso kaming bayan, sa may ospital. Nakakainis kasi pumunta si Ate don para maayos na yung sigalot ng pamilya nila pero ganon pa yung ginawa. Kaya pala nagkaroon ng away, diba nasabi kong christian yung family ni ate, nalaman nilang yung kapatid ng nanay ni ate, yung tita nya, nung nagtrabaho sa may thailand, natuto ng dark arts, pangungulam. Yung style ng pangungulam nila don, iba dito satin. Una pinag prapractice-an mga hayop, pero naging tao na. Don na sya sinaway ng pamilya nya. Don na rin sya lumayo. Alam nyo yung chemical na gamit ng mga magsasaka para mapatay yung mga damo? Ganon yung nakita sa tyan nila Kuya Wang. Sabi nung mga doktor don sa ospital, hindi daw ba nila naamoy yung iniinom nila, purong yung kemikal na yun yung nakita sa isinuka nila. Pero kahit ako, hindi ko naamoy na hindi juice pala yun. Dahil don, imbes na kila ate ganapin yung kasal, sa amin na tuloy. Naurong din yung date kasi halos isang linggo silang naconfine.</p>
-
-            <p class="text-sm text-red-400 font-semibold mt-4">Kaya mag-ingat tayo. Hindi porket aswang, visayas na agad. Noon pwede pa. Pero sa panahon natin ngayon? Kahit saan pwede na sila. Kumbaga sa mga pokemon nag evolve na rin sila. Tayo ngang tao nakaka adapt tayo agad, sila din syempre. Hindi rin porke kamag anak mo, kaibigan mo o kaya nakakaawa itsura, hindi ka na tratraydurin. Ingat tayo mga bagis.</p>
+        <!-- COVER IMAGE WITH GLOW & SHADOW -->
+        <div class="relative mb-8 rounded-xl overflow-hidden border border-red-900/50 shadow-2xl glow-box group">
+            <img src="https://i.imgur.com/7m5x1bH.jpg" class="w-full max-h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" alt="Kalamansi Chronicles Cover Image">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
         </div>
 
-        <!-- MALIIT AT SIMPLE LANG NA ADSENSE AD (SA DULO LANG) -->
-        <div class="mt-8 mx-auto w-full max-w-[728px] h-[90px] border border-red-900/20 bg-red-950/10 rounded overflow-hidden flex items-center justify-center">
+        <!-- CONTENT ARTICLE -->
+        <article class="glass-card rounded-2xl p-6 sm:p-10 space-y-6 text-gray-300 leading-relaxed text-base sm:text-lg border border-red-900/30 shadow-2xl">
+            
+            <p>Mahalaga sakin ang kalamansi. Masustansya at nakapang aalis umay. Di rin ako naalis ng bahay na walang kalamansing dala, kahit isa man lang. Maging sa basong aking pag iinuman ako'y pihikan, gusto ko babasagin lamang, ayoko ng plastic. Bakit? Ganto kasi yun kaibigan.</p>
+
+            <!-- KABANATA 1 -->
+            <div class="border-l-2 border-red-700 pl-4 my-6 space-y-4">
+                <h2 class="text-xl font-bold text-red-500 uppercase tracking-wide">I. Ang Fiesta sa Probinsya at ang Sisig</h2>
+                <p>Probinsya, expected mo fiesta diba? Laging ganon lalo pagpatak ng buwan ng April hanggang May, mananawa ka sa karne. Si Butch, inaya kami nila Kulas na pumuntang fiesta sa Brgy *toot*. Ayokong banggitin pangalan, mahirap na. Basta malayo sya sa town proper, malayong malayo. Dahil sa wala naman akong ginagawa, sumama ako. Tawanan kami sa daan, kasi nga anlayo. Kahit kumain kami ng pagkarami rami, matatagtag rin pag uwi namin, lubak kasi yung daan saka malayo nga.</p>
+
+                <p>Pagdating namin, pinakain na kami nung tropa namin. Nakaugalian ko na, pag kumakain ako sa ibang bahay, uunahin kong uminom ng tubig. Pipili ako ng babasagin na baso o kaya cup. Ipapailalim ko yung isang kamay ko don, saka ipipihit ko pakaliwa pakanan yung baso. <span class="horror-highlight">Pag nabasag kasi, ibig sabihin may lason.</span> Hindi ko na kasi matandaan kung sa kanan ba o kaliwa, kaya both ways ko ginagawa. Turo sakin ni Roger, ganon kasi sya. Nakaugalian na rin nya, turo naman sa kanya ng lolo nya sa probinsya nila, ang probinsya nya somewhere in Mindanao. Hindi naman nabasag. Isa pa tropa namin yung nag imbita, pero kasi nakasanayan ko na nga, mismong sa bahay namin ganon ako.</p>
+
+                <p>Pagkatapos kumain, pumunta kaming basketball court sa barangay nila, may sayawan, party party. Tawa kami ng tawa nila Kulas kay Butch kasi may isinasayaw syang babae, masyadong maarte, parang diring diri sa tropa namin. Nung natapos, naglakad kami pauwi sa kanila. Maliit lang yung baryo, magkakakilala mga tao. Fiesta pa man din, kaya halos lahat ng dayo gusto nila kumain sa bawat bahay. Nakangiti kaming tumatanggi pero may isang matandang babae yung mapilit, kahit yung tropa naming taga ron hindi makatanggi. Kaya sabi ni Butch pagbigyan kasi nakakahiya naman.</p>
+
+                <p>Yung bahay non nasa gitna ng bukid. Halatang bago pa yung bahay at di pa tapos kasi wala pang palitada. May mga tanim na kalamansi don sa may papasok, may dalawang bahay pang mararaanan bago yung bahay non. Natuwa ako don sa mga kalamansi kasi ang lalaki. Namitas ako ng apat, tig iisa kami. Nauuna yung matanda, ang bilis nya nga maglakad. Binigay ko isa isa sa kanila yung kalamansi.</p>
+
+                <div class="bg-black/60 p-4 rounded-lg border border-red-950 my-2 text-sm sm:text-base italic">
+                    <p class="text-gray-200"><em>"Bakit to?"</em> tanong ni Butch.</p>
+                    <p class="text-red-400 mt-1"><em>"Baka karne ng tao yung ipakain satin. Just in case lang,"</em> biro ko. Di ko alam na magkakatotoo pala, nagdilang anghel ako, wew.</p>
+                </div>
+
+                <p>Turo din yon sakin nung naging kaibigan ko sa manila. Pero mas nakasanayan ko yung sa may baso. Kwentuhan kami habang nasa daan. Yung tropa namin, si Jebon, sabi nya yung matanda nagtitinda raw yun ng bagoong sa may bayan. Matagal na raw, kasing edad ng lola nya. Yung lola nya buhay pa naman, pero bed ridden na. Kaya naamaze kami kay lola kasi ang liksi pang kumilos.</p>
+
+                <p>Pagkarating don sa kanila, pagkaupo namin sa mesa, tumawag yung mama ni Jebon, tinatanong kung nasaan kami. Hinahainan kami nung anak nung matanda ng pansit. Sinabi ni Jebon na sumaglit lang kami don sa bahay ng matanda. Hinintay kong maghain sila ng tubig, habang ginagawa ko yung routine ko, pansin ko nakatingin sakin yung anak. Nung naubos yung pansit, manok tyaka kikiam sahog. Sunod naman kanin tyaka sisig. Tumatanggi na kami non, kahit ang sarap tignan nung sisig. Kaya ang ginawa nung matanda, ibinalot na lang nya yung sisig.</p>
+
+                <p>Pagbalik namin kila Jebon, yung ate nya inaya na kaming uminom. Pero si Kulas hindi namin pinainom, sya kasi driver kaya good boy talaga yon. Si Butch inilagay nya yung sisig sa may plato. Ako naman, naghanap akong sili saka tiniris ko saka yung kalamansi ko, hinati ko saka ko binudbod don. Habang hinahalo ko, parang may nagbago don sa sisig. <span class="horror-highlight">Naging parang may buhok buhok.</span> Pinagalitan ko pa si Butch non kasi baka buhok nya kasi maiikli, di naman pwedeng akin kasi mahaba buhok ko.</p>
+
+                <p>Nung si Kulas na yung naghalo, paisa isa tinatanggal nya yung mga buhok, bigla syang naduwal. Tinanong namin kung bakit. Basta suka lang sya ng suka. Nung tinignan namin yung sisig, kulang na lang dukutin namin mga bituka namin mga bes. <span class="horror-highlight">Nagkaroon ng kuko ng tao don sa sisig.</span> Kinuha ko pa kay Butch yung kalamansing bigay ko, saka ko binudbod. <span class="horror-highlight">Mas lalong dumami buhok, dun na sa karne mismo.</span></p>
+
+                <p>Pinagalitan kami nung mama ni Jebon, dapat raw hindi na kami sumama. Kasi kaya pala tinawagan nya si Jebon para maiiwas kami. Kahit alam na nya kung nasaan kami nila Jebon, tinawagan nya pa rin para malaman nung matanda na alam nya kung nasaan kami. May nakakita kasi samin na inaya nung matanda. <span class="horror-highlight">May usap usapan na pala sa kanila na aswang yung pamilyang yon.</span> Si Jebon lang hindi naniniwala. Takot na takot kaming umuwi non kaya don na kami natulog. Sinunog namin yung sisig. Ang nakakadiri pa, yung asawa pala nung anak ni Lola kamamatay lang, close casket beks, imaginin nyo na.</p>
+
+                <p>Hanggang nung 2014 nakikita ko yung matanda sa palengke. Madalas pag nakikita nya ako, binibigyan nya ako ng libreng bagoong, home made daw nya beks. Yung mga kapwa nya tindera, pasikreto akong iniilingan. One time pa nga, may sumunod pa talaga sakin para sabihan ako. Akala nila hindi ako aware. Pero hindi nila alam, sa twing bibigyan ako non ni Lola, babasagin ko yung lalagyan.</p>
+            </div>
+
+            <!-- KABANATA 2 -->
+            <div class="border-l-2 border-red-700 pl-4 my-6 space-y-4">
+                <h2 class="text-xl font-bold text-red-500 uppercase tracking-wide">II. Ang Handaan sa Caloocan</h2>
+                <p>Second time naman nangyari sa Manila, tumigil muna ko sa college, nagdecide akong magwork muna. Nagwowork ako sa call center non, booming pa lang non ang cc satin. Nung yung isang kateam ko, nag aya sa kanila. Don na lang daw kami maglunch sa kanila. Sige naman kami. Sa may Caloocan sila, dapat ang mangyayari, don na rin kami matutulog bago yung pasok namin kasi masyado ng hustle pag uuwi pa kami ng kanya kanyang bahay. Yung iba kasi QC pa, ako naman Paco pa. Pero nangyari nga ito.</p>
+
+                <p>Di pa tapos magluto non nung dumating kami. Inom muna ng rc tyaka kain ng biscuit. So dahil nga sa nangyari, lagi na ko may dalang kalamansi. Ginagawa ko pa rin naman yung sa may baso. May isa akong ka team na nahahalata na yung 'mannerism' ko sa may baso. Kaya kwinento ko sa kanya lahat lahat, kumakain kami non sa chowking nung nagtanong sya. Naghain yung tatay nung nag imbita, si Mae, ng kinilaw na karne. Nakakita na ko ng ganon pero nagtataka ako non kung bakit mamula mula yung karne.</p>
+
+                <p class="italic text-gray-400">"Galing kasing probinsya namin yung karne, native na baboy kaya ganyan," sabi nung tatay.</p>
+                <p>Gusto ko sanang sabihin, opo alam ko po yung itsura ng native na baboy, maitim, maliit, pero hindi si Binay. Pag nakakakita ako non sa gabi, binabato ko kahit nasa kulungan, mukha kasing aswang.</p>
+
+                <p>Ako kasi hindi ako fan ng kinilaw na karne, kung kinilaw na isda yon, uubusin ko pa. Pero wala ayoko talaga ng niluto lang sa sukang karne. Yung dalawa naming kasamang lalaki, kumain sila, may mga bisita rin na iba bukod samin. Nakapwesto kami sa may gilid ng bahay, pahaba yung mesa. Anim kami, pang pito yung si Mae. Hindi nya kami maasikaso kasi marami silang bisita, puno ng tao yung buong bahay nila tyaka bakuran. Yung part na yun ng caloocan, mapuno eh, basta parang nasa probinsya ka rin lang.</p>
+
+                <p>Nung naghain na ng kanin tyaka ulam, una kong tinirada yung inihaw na isda. Nanghingi yung isa naming kasama kay Mae ng kalamansi para sana ilagay sa may toyo na sawsawan. Pero wala daw. Kaya ako sabi ko meron ako. Bigla na lang umalis si Mae. Sabi nung isa pa naming kasama, naoffend ko ata, girl scout daw kasi ako masyado. Wala talaga sa isip ko na may mangyayaring di kanais nais, syempre mababait naman sila, lalo si Mae, ako yung parang bunso sa grupo, sya naman yung umaalalay sakin nung bago pa lang ako.</p>
+
+                <p>Pero kasi out of habit na yung ginagawa ko, nakasanayan ko na nga. Kahit nga mama ko pinapagalitan na ako kakaganon ko, sino daw bang maglalason sakin sa sarili naming pamamahay. Ultimong kahit sa jollibee kung saan bida ang saya, to think na hindi naman babasagin yung baso don.</p>
+
+                <p>Yun na nga, nung nagdecide ako na karne naman ang kainin, tinusok ko ng tinidor yung kalamansi saka yung sinandok kong ulam binudbod ko doon. Tanghaling tapat, nagsitindigan mga balahibo ko sa katawan. Adobo yung sinandok ko, mukhang masarap nung una, <span class="horror-highlight">pero nanlilimahid na bigla.</span> Busy yung iba sa pagkain, kaya yung katabi ko lang ang nakapansin. Dapat magwawala na sya pero pinigilan ko. Pinaghanap ko sya ng pwedeng paglagyan nung sinandok ko, ang nahanap nya yung baunan nya ng tubig, dun namin nilagay. Saka ko pinatago sa kanya. Gusto ko ng magsuka suka non kasi sarap na sarap yung mga kasama namin. Kakapigil ko nagawa ko naman kahit papano. Pero yung katabi ko, hindi na nya kinaya, nagsuka sya ng nagsuka. Ako humahagod ng likod nya.</p>
+
+                <p class="italic text-red-400">"Wag kang mag ooa be, kung gusto mo pang maranasan na magkarayuma," sabi ko.</p>
+                <p>Kasi diba malay ko ba kung anong pwede nilang gawin samin, pag nalaman nilang alam namin. Kaka 19 ko lang non, di ko pa nakaka daupang palad si Luke Evans, ayoko pa matigok. Dahil don sa pagsusuka nya, nakapagdahilan kaming dalawa na kunwari magpapa ospital sya. Pinapaiwan pa ng mama ni Mae yung iba samin kasi marami pa daw pagkain, pero buti na lang nagdalang hiya sila, sumama na sila samin.</p>
+
+                <p>Nung nakarating na kami samin, don kami tumuloy, pinakita nya yung nasa lalagyan nya ng tubig, habang tumitili. Nagsukasuka sila, grabe. Gusto nila iiwasan na namin si Mae, pero naisip ni Nat na wag kasi baka makahalata. Hayaan na lang daw. Pero yung iba kung pwede lang lumaklak sila ng zonrox o liquid sosa, ginawa na nila, matunaw lang yung karne sa tyan nila. Pinagpapasalamat nila, na hindi sila nakakain nung dinuguan. <span class="horror-highlight">Ang sabi kasi nung nagtanong kami, may certain food na ipapakain sila sayo para maging katulad ka na nila. Kadalasan laman loob ng tao na dinasalan nila.</span></p>
+            </div>
+
+            <!-- KABANATA 3 -->
+            <div class="border-l-2 border-red-700 pl-4 my-6 space-y-4">
+                <h2 class="text-xl font-bold text-red-500 uppercase tracking-wide">III. Ang Trabaho ni Kuya Randy sa Kalsada</h2>
+                <p>Sa pinsan ko naman to. Si Kuya Randy, isa sya don sa mga nag eespalto ng kalsada. Nagpupunta sila sa iba't ibang lugar sa bansa. Okay, hindi ako magbabanggit ng specific na lugar. Yung dalawang experience ko, naikwento ko sa kanila, yung iba tinawanan lang ako, pero sya tyaka yung dalawa ko pang pinsan eh ginagawa na rin yun twing mapapasabak sila ng kainan sa ibang lugar.</p>
+
+                <p>So ganon nga, last night na nila don sa may lugar na yon. Yung boss nila, binilinan sila pagkarating pa lang nila don na laging magdala ng sarili nilang tubig, wag silang bibili ng kahit na ano sa may baryong yon. Hindi ipinaliwanag nung boss nila kung bakit ganon. Ayun nga last night na nila don, may magandang babae daw galing don sa baryo na pumunta don sa tinutuluyan nilang bahay, na asa katabing baryo pa. Parang nahalina raw silang lahat, inimbitahan daw sila nung babae na pumunta sa bahay kasi nag-aaya ng inuman. Buti na lang sabi nung pinsan ko, nung dumating yung babae kakain pa lang sila, hawak nya pa yung kalamansi, nung magpunta sila don sa baryo na ginagawan nila ng kalsada.</p>
+
+                <p>Pagkarating don, pinaupo agad sila sa may inuman. Parang nagtaka sila lahat kasi don na sila natauhan. Buti yung isa, nakapagtext pa sa boss nila na nasa katabing bahay lang nung tinutuluyan nila. Yung boss nila nagreply, sinabihan daw silang mga kupal daw sila bat sila sumama. Yung pinsan ko, binudburan nya yung pulutan. Medyo madilim kaya hindi nya gaano unang maaninag kung may nagbago. <span class="horror-highlight">Pero nung iniangat nya yung mangkok, kita nya may eyeball daw, may kuko, may karne rin na may buhok buhok pa.</span> Sabi nung babae, kambing raw yon. Ilokano yung pinsan ko, hindi sya maloloko, alam nya yung amoy at texture ng karne ng kambing sa tingin pa lang. Hindi mo sya maloloko, nakipag away pa nga yon dati sa may kainan sa may Quiapo, sabi nung tindera, kambing daw yung ginamit sa pinapaitan, kaya mahal yung presyo. Pero nakipag away sya kasi, karne naman ng baka. Marahan nya lang na ibinaba yung mangkok. Butil butil pawis nya raw non. Halos hindi sya makagalaw, actually lahat sila. Kasi narealize na nila kung bakit pinagbabawalan sila ng boss nila nung umpisa pa lang na wag bumili ng kahit na ano sa baryong yon, pati kung bakit beast mode na beast mode yung boss nila nung sinabi nila na nandon sila. <span class="horror-highlight">Aswang ata yung mga taga roon.</span> Pinipilit silang pakainin nung pulutan. Pero todo tanggi sila. Yung pinsan ko, naging vegetarian daw non ng wala sa oras, makapag palusot lang.</p>
+
+                <p>Buti na lang dumating yung boss nila, ayaw pa sana silang paalisin. Pero sabi nung boss nila, pinapatawag sila sa bahay nung mayor nung lugar. Hindi na raw nakapalag yung mga tao don sa baryo. Pumunta talaga sila don sa bahay ng mayor. Don tinawanan sila ng tinawanan nung mayor. Doon na rin sila pinatulog.</p>
+
+                <p>Nung kwinento nya samin, laptrip kami sa kanya. Malaking tao kasi yung pinsan ko, maton kung maton. Sya yung tipong pag nakasalubong mo sa may kanto, iiwasan mo. Pero nung pagkauwi nya samin, iyak sya ng iyak sa nanay nya. Todo pasalamat rin sya sakin. Pero dahil don, never na kami bumili ng lutong ulam, ang mama ko na hindi naniniwala sa mga aswang eklavu na yan twing madaling araw na nabili ng karne. Yung makikita pa nya mismong pinapatas yung baboy.</p>
+            </div>
+
+            <!-- KABANATA 4 -->
+            <div class="border-l-2 border-red-700 pl-4 my-6 space-y-4">
+                <h2 class="text-xl font-bold text-red-500 uppercase tracking-wide">IV. Ang Kasal at ang Nabatas na Baso</h2>
+                <p>Ito, nangyari lang saming magpipinsan, last year. Kasal ni Kuya Wang, pinsan namin. Syempre lalaki sya, yung handaan sa may babae. Ganon kasi samin. Two days bago yung kasal, nauna na kaming magpipinsan don sa probinsya ng babae, kasama si Kuya Wang. Kasama din namin yung kaibigan ni Kuya na hiniraman nya ng truck para don isakay yung mga gamit na kailangan. Sa norte pa rin naman yung probinsya, mula probinsya namin, dalawang oras ang byahe. Dagdag isang oras papunta sa mismong barangay nung babae. Nagbibiruan pa kami, kasi si Kuya Randy, parang isang sakong kalamansi ata yung dala nya. Sa bag rin nya, puro kalamansi. Kalamansi Man nga tawag na namin sa kanya, sa likod kasi ng bahay nila puro kalamansi na tanim. Akala namin magagamit namin yung kalamansi non, hindi pala, display lang.</p>
+
+                <p>Mababait yung side nung babae. Bondat na bondat kami, fresh na fresh yung mga seafoods na hinain nila. Nag eemote kaming lahat non sa may dagat nung pa gabi na. Sa may dalampasigan kasi malapit yung bahay nila. Hindi naman kami binawalan na kung ano pa man. Christian kasi sila, kaya wala gaanong pamahiin. Basta wag na lang raw kami magswimming pag naglakihan na yung alon kasi delikado na.</p>
+
+                <p>Ma niyog don, dahil namiss naming maglaro, sabi ni Kuya Wang, maglaro kaming taguan. Pero kasi yung iba samin takot, by pair ang ganap. Yun laro kami, dayaan pa kasi sila Kuya Wang tyaka Kuya Randy, maduduga talaga eversince. Nung napagod sa kakatakbo, nagkwentuhan na lang kami, yung fiance ni Kuya Wang, nagkwento na may isa syang tita na nasa dulong part ng lugar nila nakatira. Gusto nya sana na umattend yun sa kasal nila, kaso hindi ininvite ng parents nya. May away kasi, bata pa lang daw sya hindi na nag uusap yun tyaka parents nya. Kaya sabi ni Kuya Wang, kung gusto raw ba nya, puntahan namin. Sige naman si Ate, kaya umuwi lang saglit sya, kumuha ng invitation, saka kami lumarga pero hindi nya sinabi sa parents nya na kung san kami pupunta.</p>
+
+                <p>Maganda yung bahay, modern yung style. Halatang may datung yung may-ari. Perfect dreamhouse na overlooking the sea. Yung sumalubong samin, katiwala. Sa may garden andon yung tita ni ate. May edad na, pero yung halata mong walang gaanong stress sa buhay. Pinapasok kami sa loob pero nagpaiwan muna ako sa labas, magyoyosi eh. Nagpaiwan din kasama ko si Kuya Randy saka yung isa ko pang pinsan. Siguro mga thirty minutes, naaliw kami don sa koi pond sa may garden nung yung katiwala naghatid ng meryenda sa garden. Nakaugalian na nga, tapos ginaya pa ko nung dalawa pagpihit ko ng mabilisan sa may baso, <span class="horror-highlight font-bold">biglang nabasag.</span> Sa loob ng ilang taon na paggawa ko nun, yun yung unang beses na may mabasag na baso. Take note hindi lang ako yumg may nabasag na baso. Pati yung kila Kuya Randy. Tinginan lang kami sabay takbo sa loob. Hinila namin mga pinsan namin. Sakay agad sa truck. Minumura na kami ni Kuya Wang kasi ano daw trip namin, hindi namin sya pinapansin ni Kuya Randy na nagdadrive.</p>
+
+                <p>Di pa kami nakakalayo, <span class="horror-highlight">nagsimula na silang mangisay saka magsuka.</span> Imbes na sa bahay nila ate, diretso kaming bayan, sa may ospital. Nakakainis kasi pumunta si Ate don para maayos na yung sigalot ng pamilya nila pero ganon pa yung ginawa. Kaya pala nagkaroon ng away, diba nasabi kong christian yung family ni ate, nalaman nilang yung kapatid ng nanay ni ate, yung tita nya, nung nagtrabaho sa may thailand, <span class="horror-highlight">natuto ng dark arts, pangungulam.</span> Yung style ng pangungulam nila don, iba dito satin. Una pinag prapractice-an mga hayop, pero naging tao na. Don na sya sinaway ng pamilya nya. Don na rin sya lumayo. <span class="horror-highlight">Alam nyo yung chemical na gamit ng mga magsasaka para mapatay yung mga damo? Ganon yung nakita sa tyan nila Kuya Wang.</span> Sabi nung mga doktor don sa ospital, hindi daw ba nila naamoy yung iniinom nila, purong yung kemikal na yun yung nakita sa isinuka nila. Pero kahit ako, hindi ko naamoy na hindi juice pala yun. Dahil don, imbes na kila ate ganapin yung kasal, sa amin na tuloy. Naurong din yung date kasi halos isang linggo silang naconfine.</p>
+            </div>
+
+            <!-- PAALALA / CONCLUSION -->
+            <div class="bg-red-950/40 border border-red-800/60 p-5 rounded-xl mt-8">
+                <p class="text-sm sm:text-base text-red-400 font-semibold leading-relaxed">
+                    Kaya mag-ingat tayo. Hindi porket aswang, visayas na agad. Noon pwede pa. Pero sa panahon natin ngayon? Kahit saan pwede na sila. Kumbaga sa mga pokemon nag evolve na rin sila. Tayo ngang tao nakaka adapt tayo agad, sila din syempre. Hindi rin porke kamag anak mo, kaibigan mo o kaya nakakaawa itsura, hindi ka na tratraydurin. Ingat tayo mga bagis.
+                </p>
+            </div>
+
+        </article>
+
+        <!-- SOCIAL SHARE BUTTONS -->
+        <div class="mt-10 pt-6 border-t border-red-950/80 flex flex-col items-center gap-3">
+            <span class="text-xs text-gray-400 font-medium tracking-widest uppercase">Share this story</span>
+            <div class="flex items-center justify-center gap-3">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://sunakohorrorstories.vercel.app/kalamansi-and-the-babasaging-baso-chronicles.html" 
+                   target="_blank" rel="noopener noreferrer" title="Facebook"
+                   class="w-9 h-9 rounded-full bg-blue-600/20 border border-blue-500/40 hover:bg-blue-600 text-blue-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://sunakohorrorstories.vercel.app/kalamansi-and-the-babasaging-baso-chronicles.html&text=Read%20this%20terrifying%20story:%20KALAMANSI%20AND%20THE%20BABASAGING%20BASO%20CHRONICLES" 
+                   target="_blank" rel="noopener noreferrer" title="X (Twitter)"
+                   class="w-9 h-9 rounded-full bg-zinc-800 border border-zinc-700 hover:bg-zinc-700 text-gray-300 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <button onclick="copyLink()" title="Copy Link for Instagram"
+                        class="w-9 h-9 rounded-full bg-pink-600/20 border border-pink-500/40 hover:bg-pink-600 text-pink-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-instagram"></i>
+                </button>
+                <a href="https://t.me/share/url?url=https://sunakohorrorstories.vercel.app/kalamansi-and-the-babasaging-baso-chronicles.html&text=KALAMANSI%20AND%20THE%20BABASAGING%20BASO%20CHRONICLES" 
+                   target="_blank" rel="noopener noreferrer" title="Telegram"
+                   class="w-9 h-9 rounded-full bg-sky-500/20 border border-sky-400/40 hover:bg-sky-500 text-sky-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?text=Read%20this%20story%20at%20https://sunakohorrorstories.vercel.app/kalamansi-and-the-babasaging-baso-chronicles.html" 
+                   target="_blank" rel="noopener noreferrer" title="WhatsApp"
+                   class="w-9 h-9 rounded-full bg-emerald-600/20 border border-emerald-500/40 hover:bg-emerald-600 text-emerald-400 hover:text-white flex items-center justify-center text-sm transition-all hover:scale-110">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <span id="copyMsg" class="text-[11px] text-green-400 hidden animate-pulse">Link copied to clipboard!</span>
+        </div>
+
+        <!-- BOTTOM ADSENSE AD -->
+        <div class="mt-8 mx-auto w-full max-w-[728px] min-h-[90px] glass-card rounded-lg overflow-hidden flex items-center justify-center">
             <ins class="adsbygoogle"
-                 style="display:inline-block;width:100%;height:90px"
+                 style="display:block; width:100%; height:90px"
                  data-ad-client="ca-pub-6737021640296795"
-                 data-ad-slot="auto"></ins>
+                 data-ad-slot="auto"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
             <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
 
+        <!-- BACK BUTTON TO HOME -->
+        <div class="mt-10 text-center">
+            <a href="index.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-red-950 to-red-900 hover:from-red-800 hover:to-red-700 text-red-200 hover:text-white border border-red-700/50 rounded-full px-8 py-3 text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:shadow-red-900/50 hover:scale-105">
+                <i class="fa-solid fa-ghost"></i> Read More Horror Stories
+            </a>
+        </div>
+
     </main>
 
     <!-- FOOTER -->
-    <footer class="text-center py-4 text-xs text-gray-600 border-t border-red-950/50">
-        &copy; 2026 Sunako Horror Stories
+    <footer class="bg-black/90 border-t border-red-950 py-6 px-4 text-xs text-gray-500 text-center space-y-3">
+        <div class="flex justify-center gap-4 text-gray-400 flex-wrap">
+            <a href="about.html" class="hover:text-red-400 transition-colors">About Us</a>
+            <span>•</span>
+            <a href="privacy.html" class="hover:text-red-400 transition-colors">Privacy Policy</a>
+            <span>•</span>
+            <a href="terms.html" class="hover:text-red-400 transition-colors">Terms of Service</a>
+            <span>•</span>
+            <a href="contact.html" class="hover:text-red-400 transition-colors">Contact Us</a>
+        </div>
+        <p>&copy; 2026 SUNAKO HORROR STORIES. All rights reserved.</p>
     </footer>
+
+    <!-- JS ANIMATION FOR DARK PARTICLES & COPY LINK -->
+    <script>
+        // DARK SMOKE PARTICLES CANVAS SCRIPT
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const particles = [];
+        const particleCount = 45;
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2.5 + 0.5;
+                this.speedY = -(Math.random() * 0.4 + 0.1);
+                this.speedX = (Math.random() - 0.5) * 0.2;
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+                if (this.y < 0 || this.x < 0 || this.x > canvas.width) {
+                    this.reset();
+                    this.y = canvas.height;
+                }
+            }
+            draw() {
+                ctx.fillStyle = `rgba(180, 20, 20, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // COPY LINK SCRIPT
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            const msg = document.getElementById('copyMsg');
+            msg.classList.remove('hidden');
+            setTimeout(() => msg.classList.add('hidden'), 2000);
+        }
+    </script>
 
 </body>
 </html>
