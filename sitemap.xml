@@ -117,4 +117,15 @@
     <loc>https://sunakohorrorstories.vercel.app/elcharo.html</loc>
     <priority>0.8</priority>
   </url>
+
+          <url>
+    <loc>https://sunakohorrorstories.vercel.app/laisla.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+            <url>
+    <loc>https://sunakohorrorstories.vercel.app/kanong.html</loc>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
