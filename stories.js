@@ -263,6 +263,31 @@ const stories = [
         author: "Mateo Alva",
         location: "Mexico",
         excerpt: "They say greed is a terminal disease"
+    },
+
+        {
+        id: "midnight-passenger-route-9",
+        title: "LA ISLA DE LAS MUÑECAS",
+        cover: "https://i.imgur.com/771Pwy9.jpg",
+        link: "laisla.html",
+        category: "real-life",
+        lang: "english",
+        rating: "4.0",
+        author: "Gabriel Ramos",
+        location: "Mexico",
+        excerpt: "Some places on this earth are born cursed"
+    },
+        {
+        id: "midnight-passenger-route-9",
+        title: "Mae Nak Phra Khanong",
+        cover: "https://i.imgur.com/2pfAsh5.jpg",
+        link: "kanong.html",
+        category: "real-life",
+        lang: "english",
+        rating: "9.0",
+        author: "Somchai Vachiraporn",
+        location: "Thailand",
+        excerpt: "The legendary Siamese ghost story of Mae Nak Phra Khanong and her unyielding devotion from beyond the grave."
     }
 
    
