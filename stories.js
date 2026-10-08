@@ -239,5 +239,31 @@ const stories = [
         author: "Randy",
         location: "United States",
         excerpt: "The clock on the dashboard read 1:17 AM"
+    },
+    {
+        id: "midnight-passenger-route-9",
+        title: "THE WATER-HORSE OF LOCH AWE",
+        cover: "https://i.imgur.com/VPQa7qR.jpg",
+        link: "waterhorse.html",
+        category: "real-life",
+        lang: "english",
+        rating: "4.0",
+        author: "Kyla",
+        location: "United Kingdom",
+        excerpt: "The autumn mist clung to the jagged"
+    },
+    {
+        id: "midnight-passenger-route-9",
+        title: "El Charro Negro",
+        cover: "https://i.imgur.com/kL2pkzv.jpg",
+        link: "waterhorse.html",
+        category: "real-life",
+        lang: "english",
+        rating: "6.0",
+        author: "Mateo Alva",
+        location: "Mexico",
+        excerpt: "They say greed is a terminal disease"
     }
+
+   
 ];
