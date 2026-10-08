@@ -213,7 +213,7 @@ const stories = [
         lang: "english",
         rating: "4.0",
         author: "A.R. Cruz",
-        location: "Philippines",
+        location: "Japan",
         excerpt: "Five days passed without incident. I sank into the easy rhythm of summer vacation—fishing"
     },
     {
