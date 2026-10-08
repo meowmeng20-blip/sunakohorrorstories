@@ -209,6 +209,29 @@ const stories = [
         author: "A.R. Cruz",
         excerpt: "Five days passed without incident. I sank into the easy rhythm of summer vacation—fishing"
 
-    }    
-   
+    },
+                  {
+        id: "hagdan",
+        title: "CRIMSON SMILE: THE TALE OF THE SLIT-MOUTHED WOMAN",
+        cover: "https://i.imgur.com/InJwHPO.jpg",
+        link: "slit.html",
+        category: "real-life",
+        lang: "english",
+        rating: "5.0",
+        author: "Samson",
+        excerpt: "It started as a rumor in the neighborhood"
+
+    },
+                      {
+        id: "hagdan",
+        title: "THE MIDNIGHT PASSENGER: A GHOST ON ROUTE 9",
+        cover: "https://i.imgur.com/xaTwhSz.jpg",
+        link: "passenger.html",
+        category: "real-life",
+        lang: "english",
+        rating: "7.0",
+        author: "Randy",
+        excerpt: "The clock on the dashboard read 1:17 AM"
+
+    }   
 ];
