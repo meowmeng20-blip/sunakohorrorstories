@@ -157,5 +157,20 @@
     <loc>https://sunakohorrorstories.vercel.app/lesca.html</loc>
     <priority>0.8</priority>
   </url>
+  
+   <url>
+    <loc>https://sunakohorrorstories.vercel.app/monte.html</loc>
+    <priority>0.8</priority>
+  </url>
+  
+   <url>
+    <loc>https://sunakohorrorstories.vercel.app/changi.html</loc>
+    <priority>0.8</priority>
+  </url>
+  
+   <url>
+    <loc>https://sunakohorrorstories.vercel.app/hostert.html</loc>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
